@@ -22,5 +22,25 @@ class Valores(models.Model):
         verbose_name_plural = 'Valores'
 
     def __str__(self):
-        return self.name
-    
+        return self.valor
+
+
+class ImagensGaleria(models.Model):
+    image = models.ImageField(upload_to='imagensGaleria/', verbose_name='Imagem do evento', null=True)
+
+    class Meta:
+        verbose_name = 'Imagem'
+        verbose_name_plural = "Imagens dos eventos"
+
+    def __str__(self):
+        return self.image
+
+class MensagemCoracao(SingletonModel):
+    message = models.CharField('Mensagem_coracao', max_length=200)
+
+    class Meta:
+        verbose_name = 'Mensagem do coração'
+
+
+    def __str__(self):
+        return self.message
