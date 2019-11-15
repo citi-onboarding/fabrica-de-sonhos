@@ -44,3 +44,11 @@ class MensagemCoracao(SingletonModel):
 
     def __str__(self):
         return self.message
+
+# Seção 'Download de materiais"
+class DownloadMateriais(SingletonModel):
+    arquivoParaDownload = models.FileField(upload_to='arquivoDownload/', verbose_name='Material para download')
+    linkParaTeste = models.URLField('Link para teste', max_length=254, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Material da semana'

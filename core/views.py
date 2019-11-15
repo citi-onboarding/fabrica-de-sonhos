@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import SobreInstituicao, Valores, ImagensGaleria, MensagemCoracao
+from .models import SobreInstituicao, Valores, ImagensGaleria, MensagemCoracao, DownloadMateriais
 
 class HomeView (generic.TemplateView):
     template_name = 'home.html'
@@ -16,5 +16,6 @@ class HomeView (generic.TemplateView):
         context["imagensGaleria"] = ImagensGaleria.objects.all()
         context["mensagemCoracao"] = MensagemCoracao.objects.all()
 
-
+        # Seção 'Download de Materiais'
+        context["downloadMateriais"] = DownloadMateriais.objects.all()
         return context
