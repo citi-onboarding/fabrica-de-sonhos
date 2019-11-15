@@ -3,6 +3,8 @@ from solo.models import SingletonModel
 
 # Create your models here.
 
+
+# Seção 'Sobre nós'
 class SobreInstituicao(SingletonModel):
     sobre = models.TextField('Sobre a Instituição', null=True, blank=True)
 
@@ -10,7 +12,7 @@ class SobreInstituicao(SingletonModel):
         verbose_name = 'Sobre a Instituição'
 
     def __str__(self):
-        return self.name
+        return self.sobre
 
 class Valores(models.Model):
     valor = models.CharField('Valor', max_length=100)
@@ -25,15 +27,13 @@ class Valores(models.Model):
         return self.valor
 
 
+# Seção 'Galeria de eventos'
 class ImagensGaleria(models.Model):
     image = models.ImageField(upload_to='imagensGaleria/', verbose_name='Imagem do evento', null=True)
 
     class Meta:
         verbose_name = 'Imagem'
         verbose_name_plural = "Imagens dos eventos"
-
-    def __str__(self):
-        return self.image
 
 class MensagemCoracao(SingletonModel):
     message = models.CharField('Mensagem_coracao', max_length=200)
@@ -44,3 +44,11 @@ class MensagemCoracao(SingletonModel):
 
     def __str__(self):
         return self.message
+
+# Seção 'Download de materiais"
+class DownloadMateriais(SingletonModel):
+    arquivoParaDownload = models.FileField(upload_to='arquivoDownload/', verbose_name='Material para download')
+    linkParaTeste = models.URLField('Link para teste', max_length=254, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Material da semana'
