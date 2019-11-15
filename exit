@@ -1,0 +1,89 @@
+[33mcommit db8d33ae39d4c2cfd131cd53524b53c2dd82bac7[m[33m ([m[1;36mHEAD -> [m[1;32mbackendMaterial[m[33m)[m
+Author: Vinicius Lima <vrpl@cin.ufpe.br>
+Date:   Fri Nov 15 17:47:26 2019 -0300
+
+    backendDownloadSection
+
+[33mcommit 41decdfd3b03c5c96cfbf889821172d73d58f9dd[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 34d116e 902c028
+Author: viniciuslima-99 <54997059+viniciuslima-99@users.noreply.github.com>
+Date:   Fri Nov 15 17:17:42 2019 -0300
+
+    Merge pull request #6 from citi-onboarding/BackBotarMaterial
+    
+    Back botar material
+
+[33mcommit 902c028692aa732b67c8901f4df733ebf02f784c[m[33m ([m[1;31morigin/BackBotarMaterial[m[33m)[m
+Merge: 8d5ba01 81116c5
+Author: viniciuslima-99 <54997059+viniciuslima-99@users.noreply.github.com>
+Date:   Fri Nov 15 17:04:16 2019 -0300
+
+    Merge pull request #5 from citi-onboarding/Download_e_Link
+    
+    Partes de Download e link prontas
+
+[33mcommit 81116c5096f94a042aaa5820d1f38808101bdd9d[m
+Author: Ricardo Morato Rocha <ricardomorator@hotmail.com>
+Date:   Fri Nov 15 16:24:16 2019 -0300
+
+    Download de arquivos pronto
+
+[33mcommit 45b1c4969fedf353e3271e2d05419d7e64cc29fd[m
+Author: Ricardo Morato Rocha <ricardomorator@hotmail.com>
+Date:   Fri Nov 15 15:54:07 2019 -0300
+
+    Models.py pronto
+
+[33mcommit 34d116e6786799ad3efa57f2ba8e153f1bec0f19[m
+Merge: 62bfe82 7af4fe8
+Author: viniciuslima-99 <54997059+viniciuslima-99@users.noreply.github.com>
+Date:   Thu Nov 14 23:43:42 2019 -0300
+
+    Merge pull request #4 from citi-onboarding/IntegracaoGaleriaEventos
+    
+    Integração do back da galeria de eventos com o front
+
+[33mcommit 7af4fe8d0a871648ce27065e33ef1cebf8c7fe05[m
+Author: Ricardo Morato Rocha <ricardomorator@hotmail.com>
+Date:   Thu Nov 14 23:36:39 2019 -0300
+
+    Integração do back da galeria de eventos com o front
+
+[33mcommit 62bfe825ccb132c14e6d5218fe81bbbc64cc3814[m
+Author: Vinicius Lima <vrpl@cin.ufpe.br>
+Date:   Thu Nov 14 22:04:12 2019 -0300
+
+    Back-Front-SobreNos
+
+[33mcommit 8d5ba0173498dcdc5d3b3f5084f06eda50acc592[m
+Merge: 14c4956 17dc202
+Author: viniciuslima-99 <54997059+viniciuslima-99@users.noreply.github.com>
+Date:   Thu Nov 14 14:00:08 2019 -0300
+
+    Merge pull request #2 from citi-onboarding/backGaleriaEventos
+    
+    Backend da galeria de eventos
+
+[33mcommit 17dc202e5a21351d244427f2180b3b1743a2be73[m[33m ([m[1;31morigin/backGaleriaEventos[m[33m)[m
+Author: Ricardo Morato Rocha <ricardomorator@hotmail.com>
+Date:   Thu Nov 14 13:52:31 2019 -0300
+
+    Backend da galeria de eventos
+
+[33mcommit 14c4956683e2f8d542f309b7b4ab334c73f9529d[m
+Author: Vinicius Lima <vrpl@cin.ufpe.br>
+Date:   Thu Nov 14 12:42:33 2019 -0300
+
+    BackendSobreNos
+
+[33mcommit dcf3f1b490c66eaae6b067c3fff4e2c7ee9d437b[m
+Author: Vinicius Lima <vrpl@cin.ufpe.br>
+Date:   Mon Nov 11 10:57:01 2019 -0300
+
+    create base
+
+[33mcommit 9540e40632a3c12b1bb6a6b8a350f968bc01d0bd[m
+Author: CITi <citi@cin.ufpe.br>
+Date:   Sun Nov 10 21:45:46 2019 -0300
+
+    Initial commit
