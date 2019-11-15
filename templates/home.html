@@ -18,14 +18,14 @@
     <header id="navBar"></header>
 
     <section id="galeria"></section>
-    <h2>Galeria de eventos</h2>
-    <h4>AQUI VAI FICAR O CARROSSEL DE IMAGENS</h4>
-    {% for imagem in imagensGaleria %}
-        <img src="{{ imagem.image.url }}" alt="Imagem do evento">
-    {% endfor %}
-    {% get_solo 'core.MensagemCoracao' as mensagem_do_coracao %}
-    <p>{{ mensagem_do_coracao.message }}</p>
-    <h1>------FIM DA SEÇÃO------</h1>
+        <h2>Galeria de eventos</h2>
+        <h4>AQUI VAI FICAR O CARROSSEL DE IMAGENS</h4>
+        {% for imagem in imagensGaleria %}
+            <img src="{{ imagem.image.url }}" alt="Imagem do evento">
+        {% endfor %}
+        {% get_solo 'core.MensagemCoracao' as mensagem_do_coracao %}
+        <p>{{ mensagem_do_coracao.message }}</p>
+        <h1>------FIM DA SEÇÃO------</h1>
 
 
     <section id="sobre"></section>
@@ -42,18 +42,27 @@
         <h1>------FIM DA SEÇÃO------</h1>
 
     <section id="download"></section>
-    {% get_solo 'core.DownloadMateriais' as download_material %}
-    <H2>Download do material</H2>
-    <a href="{{ download_material.arquivoParaDownload.url }}" download="{{ download_material.name }}">
-        <p>{{ download_material.arquivoParaDownload.url }}</p>
-    </a>
+        {% get_solo 'core.DownloadMateriais' as download_material %}
+        <H2>Download do material</H2>
 
-    <h2>Link para teste</h2>
-    <a href="{{ download_material.linkParaTeste }}">
-        <p>Link para o teste</p>
-    </a>
+        <h3>{{download_material.name}}</h3>
+        
+        <p>{{download_material.texto |safe }}</p>
 
-    <h1>------FIM DA SEÇÃO------</h1>
+        <img src="{{ download_material.image.url }}" alt="Imagem do material">
+        
+        <h4>{{ download_material.arquivo }}</h4>
+    
+        <a href="{{ download_material.arquivoParaDownload.url }}" download="{{ download_material.name }}">
+            <p>{{ download_material.arquivoParaDownload.url }}</p>
+        </a>
+
+        <h2>Link para teste</h2>
+        <a href="{{ download_material.linkParaTeste }}">
+            <p>Link para o teste</p>
+        </a>
+
+        <h1>------FIM DA SEÇÃO------</h1>
 
     <section id="contato"></section>
 
