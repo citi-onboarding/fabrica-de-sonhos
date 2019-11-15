@@ -1,4 +1,5 @@
 {% load static %}
+{% load solo_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +20,17 @@
     <section id="galeria"></section>
     
     <section id="sobre"></section>
-    
+        <h2>-- Sobre Nós --</h2>
+        <h4>Sobre a Instituição</h4>
+        {% get_solo 'core.SobreInstituicao' as sobre_instituicao %}
+        <p>{{ sobre_instituicao.sobre }} </p>
+        <h4>Nossos Valores</h4>
+        {% for elemento in valores %}
+            <h5>{{ elemento.valor }}</h5>
+            <img src="{{ elemento.image.url }}" alt="Imagem do Valor">
+            <img src="{{ elemento.gif.url }}" alt="Gif do valor">
+        {% endfor %}
+
     <section id="download"></section>
     
     <section id="contato"></section>

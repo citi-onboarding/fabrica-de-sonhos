@@ -10,7 +10,7 @@ class SobreInstituicao(SingletonModel):
         verbose_name = 'Sobre a Instituição'
 
     def __str__(self):
-        return self.name
+        return self.sobre
 
 class Valores(models.Model):
     valor = models.CharField('Valor', max_length=100)
