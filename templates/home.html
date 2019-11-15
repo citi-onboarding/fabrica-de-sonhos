@@ -42,6 +42,18 @@
         <h1>------FIM DA SEÇÃO------</h1>
 
     <section id="download"></section>
+    {% get_solo 'core.DownloadMateriais' as download_material %}
+    <H2>Download do material</H2>
+    <a href="{{ download_material.arquivoParaDownload.url }}" download="{{ download_material.name }}">
+        <p>{{ download_material.arquivoParaDownload.url }}</p>
+    </a>
+
+    <h2>Link para teste</h2>
+    <a href="{{ download_material.linkParaTeste }}">
+        <p>Link para o teste</p>
+    </a>
+
+    <h1>------FIM DA SEÇÃO------</h1>
 
     <section id="contato"></section>
 
