@@ -3,6 +3,8 @@ from solo.models import SingletonModel
 
 # Create your models here.
 
+
+# Seção 'Sobre nós'
 class SobreInstituicao(SingletonModel):
     sobre = models.TextField('Sobre a Instituição', null=True, blank=True)
 
@@ -25,15 +27,13 @@ class Valores(models.Model):
         return self.valor
 
 
+# Seção 'Galeria de eventos'
 class ImagensGaleria(models.Model):
     image = models.ImageField(upload_to='imagensGaleria/', verbose_name='Imagem do evento', null=True)
 
     class Meta:
         verbose_name = 'Imagem'
         verbose_name_plural = "Imagens dos eventos"
-
-    def __str__(self):
-        return self.image
 
 class MensagemCoracao(SingletonModel):
     message = models.CharField('Mensagem_coracao', max_length=200)

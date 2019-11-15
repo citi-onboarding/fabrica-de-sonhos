@@ -16,9 +16,18 @@
 </head>
 <body>
     <header id="navBar"></header>
-    
+
     <section id="galeria"></section>
-    
+    <h2>Galeria de eventos</h2>
+    <h4>AQUI VAI FICAR O CARROSSEL DE IMAGENS</h4>
+    {% for imagem in imagensGaleria %}
+        <img src="{{ imagem.image.url }}" alt="Imagem do evento">
+    {% endfor %}
+    {% get_solo 'core.MensagemCoracao' as mensagem_do_coracao %}
+    <p>{{ mensagem_do_coracao.message }}</p>
+    <h1>------FIM DA SEÇÃO------</h1>
+
+
     <section id="sobre"></section>
         <h2>-- Sobre Nós --</h2>
         <h4>Sobre a Instituição</h4>
@@ -30,12 +39,13 @@
             <img src="{{ elemento.image.url }}" alt="Imagem do Valor">
             <img src="{{ elemento.gif.url }}" alt="Gif do valor">
         {% endfor %}
+        <h1>------FIM DA SEÇÃO------</h1>
 
     <section id="download"></section>
-    
+
     <section id="contato"></section>
-    
+
     <footer id="footer"></footer>
-    
+
 </body>
 </html>
