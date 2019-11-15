@@ -1,5 +1,6 @@
 from django.db import models
 from solo.models import SingletonModel
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -47,6 +48,9 @@ class MensagemCoracao(SingletonModel):
 
 # Seção 'Download de materiais"
 class DownloadMateriais(SingletonModel):
+    titulo = models.CharField('Título', max_length=100, default='Titulo')
+    texto = RichTextField(null=True, blank=True, verbose_name="Texto")
+    image = models.ImageField(upload_to='imagensMaterial/', verbose_name='Imagem', null=True)
     arquivoParaDownload = models.FileField(upload_to='arquivoDownload/', verbose_name='Material para download')
     linkParaTeste = models.URLField('Link para teste', max_length=254, null=True, blank=True)
 
