@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import SobreInstituicao, Valores, ImagensGaleria, MensagemCoracao, DownloadMateriais
+from django.http import HttpResponse
+from django.core.mail import EmailMessage
 
 class HomeView (generic.TemplateView):
     template_name = 'home.html'
@@ -19,3 +21,22 @@ class HomeView (generic.TemplateView):
         # Seção 'Download de Materiais'
         context["downloadMateriais"] = DownloadMateriais.objects.all()
         return context
+
+
+def index(request):
+    return render(request, 'home.html')
+
+
+def email(request):
+    nome = request.POST.get('name')
+    email = request.POST.get('email')
+    assunto = request.POST.get('subject')
+    mensagem = request.POST.get('message')
+
+
+    subject = assunto
+    body = f'Nome: {nome}\nAssunto: {assunto}\nEmail: {email}\nMensagem: {mensagem}'
+
+    mail  = EmailMessage(subject, body, 'desafioPTAdjangoCITi2019.2@gmail.com', ['desafioPTAdjangoCITi2019.2@gmail.com', 'rmr@cin.ufpe.br'])
+    result = mail.send()
+    return HttpResponse(status=201)

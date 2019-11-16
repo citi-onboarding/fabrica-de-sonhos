@@ -64,7 +64,33 @@
 
         <h1>------FIM DA SEÇÃO------</h1>
 
-    <section id="contato"></section>
+    <section id="contato">
+        <form action="POST" id="contact-form" class="form_de_contato">
+            {% csrf_token %}
+            <label for="input-name">Nome:</label>
+            <input type="text" name="name" id="input-name" required>
+
+            <label for="input-mail">Email:</label>
+            <input type="email" name="email" id="input-mail" required>
+
+            <label for="input-subject">Assunto:</label>
+            <input type="text" name="subject" id="input-subject" required>
+
+            <label for="input-message">Mensagem:</label>
+            <input type="text" name="message" id="input-message" required>
+
+            <input type="submit" value="Enviar">
+        </form>
+        <h1>------FIM DA SEÇÃO------</h1>
+    </section>
+
+    <!-- Importação do script do Javascript para que o JQuery funcione -->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="{% static 'Javascript/main.js' %}"></script>
 
     <footer id="footer"></footer>
 
