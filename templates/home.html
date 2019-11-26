@@ -2,6 +2,7 @@
 {% load solo_tags %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,57 +13,72 @@
     <link rel="stylesheet" href="{% static 'css/download.css' %}">
     <link rel="stylesheet" href="{% static 'css/contato.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
-    <header id="navBar"></header>
+    <header id="header_navbar">
+        <nav id="navBar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920.631 185.387" id="navbar_svg">
+                <path id="Caminho_142" data-name="Caminho 142" d="M5584.279,7054.975c229.645,69.558,270.39,27.1,567.83,14.925,65.058-6.431,202.43-22.583,362.691-20.311,171.157,2.426,344.727,34.229,422.057,38.836,230.7,4.3,442.84-19.6,567.082-38.062-.444.255-.5-140.079,0-140.079s-1921.11-2.333-1919.66-1.667S5581.495,7057.952,5584.279,7054.975Z" transform="translate(-5583.307 -6908.499)" fill="#e8e0d8"/>
+            </svg>
+            <div id="secoes_box">
+                <div class="secoes">início</div>
+                <div class="secoes">sobre nós</div>
+                <div class="secoes">conteúdo</div>
+                <div class="secoes">contato</div>
+            </div>
+        </nav>
+        <div id="fix_navbar"></div>
+    </header>
 
     <section id="galeria"></section>
-        <h2>Galeria de eventos</h2>
-        <h4>AQUI VAI FICAR O CARROSSEL DE IMAGENS</h4>
-        {% for imagem in imagensGaleria %}
-            <img src="{{ imagem.image.url }}" alt="Imagem do evento">
-        {% endfor %}
-        {% get_solo 'core.MensagemCoracao' as mensagem_do_coracao %}
-        <p>{{ mensagem_do_coracao.message }}</p>
-        <h1>------FIM DA SEÇÃO------</h1>
+    <h2>Galeria de eventos</h2>
+    <h4>AQUI VAI FICAR O CARROSSEL DE IMAGENS</h4>
+    {% for imagem in imagensGaleria %}
+    <img src="{{ imagem.image.url }}" alt="Imagem do evento">
+    {% endfor %}
+    {% get_solo 'core.MensagemCoracao' as mensagem_do_coracao %}
+    <p>{{ mensagem_do_coracao.message }}</p>
+    <h1>------FIM DA SEÇÃO------</h1>
 
 
     <section id="sobre"></section>
-        <h2>-- Sobre Nós --</h2>
-        <h4>Sobre a Instituição</h4>
-        {% get_solo 'core.SobreInstituicao' as sobre_instituicao %}
-        <p>{{ sobre_instituicao.sobre }} </p>
-        <h4>Nossos Valores</h4>
-        {% for elemento in valores %}
-            <h5>{{ elemento.valor }}</h5>
-            <img src="{{ elemento.image.url }}" alt="Imagem do Valor">
-            <img src="{{ elemento.gif.url }}" alt="Gif do valor">
-        {% endfor %}
-        <h1>------FIM DA SEÇÃO------</h1>
+    <h2>-- Sobre Nós --</h2>
+    <h4>Sobre a Instituição</h4>
+    {% get_solo 'core.SobreInstituicao' as sobre_instituicao %}
+    <p>{{ sobre_instituicao.sobre }} </p>
+    <h4>Nossos Valores</h4>
+    {% for elemento in valores %}
+    <h5>{{ elemento.valor }}</h5>
+    <img src="{{ elemento.image.url }}" alt="Imagem do Valor">
+    <img src="{{ elemento.gif.url }}" alt="Gif do valor">
+    {% endfor %}
+    <h1>------FIM DA SEÇÃO------</h1>
 
     <section id="download"></section>
-        {% get_solo 'core.DownloadMateriais' as download_material %}
-        <H2>Download do material</H2>
+    {% get_solo 'core.DownloadMateriais' as download_material %}
+    <H2>Download do material</H2>
 
-        <h3>{{download_material.name}}</h3>
-        
-        <p>{{download_material.texto |safe }}</p>
+    <h3>{{download_material.name}}</h3>
 
-        <img src="{{ download_material.image.url }}" alt="Imagem do material">
-        
-        <h4>{{ download_material.arquivo }}</h4>
-    
-        <a href="{{ download_material.arquivoParaDownload.url }}" download="{{ download_material.name }}">
-            <p>{{ download_material.arquivoParaDownload.url }}</p>
-        </a>
+    <p>{{download_material.texto |safe }}</p>
 
-        <h2>Link para teste</h2>
-        <a href="{{ download_material.linkParaTeste }}">
-            <p>Link para o teste</p>
-        </a>
+    <img src="{{ download_material.image.url }}" alt="Imagem do material">
 
-        <h1>------FIM DA SEÇÃO------</h1>
+    <h4>{{ download_material.arquivo }}</h4>
+
+    <a href="{{ download_material.arquivoParaDownload.url }}" download="{{ download_material.name }}">
+        <p>{{ download_material.arquivoParaDownload.url }}</p>
+    </a>
+
+    <h2>Link para teste</h2>
+    <a href="{{ download_material.linkParaTeste }}">
+        <p>Link para o teste</p>
+    </a>
+
+    <h1>------FIM DA SEÇÃO------</h1>
 
     <section id="contato">
         <form action="POST" id="contact-form" class="form_de_contato">
@@ -85,14 +101,13 @@
     </section>
 
     <!-- Importação do script do Javascript para que o JQuery funcione -->
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
     <script type="text/javascript" src="{% static 'Javascript/main.js' %}"></script>
 
     <footer id="footer"></footer>
 
 </body>
+
 </html>
