@@ -67,17 +67,24 @@
     <section id="contato">
         <form action="POST" id="contact-form" class="form_de_contato">
             {% csrf_token %}
+            <label for="input-subject">Assunto:</label>
+            <select name="subject" id="input-subject">
+                <option value="teste1">Teste1</option>
+                <option value="teste2">Teste2</option>
+                <option value="teste3">Teste3</option>
+            </select required>
+
             <label for="input-name">Nome:</label>
             <input type="text" name="name" id="input-name" required>
 
             <label for="input-mail">Email:</label>
             <input type="email" name="email" id="input-mail" required>
 
-            <label for="input-subject">Assunto:</label>
-            <input type="text" name="subject" id="input-subject" required>
+            <label for="">Telefone:</label>
+            <input type="tel" name="telephone" id="input-telephone">
 
             <label for="input-message">Mensagem:</label>
-            <input type="text" name="message" id="input-message" required>
+            <input type="text" name="message" id="input-message">
 
             <input type="submit" value="Enviar">
         </form>
