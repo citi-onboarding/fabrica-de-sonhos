@@ -1,0 +1,143 @@
+.material{
+    position: relative;
+}
+#background_material{
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+#titulo_section{
+    font-family: 'Muli', sans-serif;
+    color: #8C0303;
+}
+
+.conteudo_section{
+    display: flex;
+}
+#conteudo_titulo{
+    font-family: 'Muli', sans-serif;
+    color: #8c0303;
+    order: 3;
+    margin: 0px;
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 55px;
+}
+#conteudo_texto{
+    font-family: 'Muli', sans-serif;
+    height: auto;
+    order: 4;
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 0px;
+    position: relative;
+    top: 20px;
+}
+#conteudo_imagem{
+    width: 300px;
+    height: 300px;
+    order: 1;
+    position: relative; 
+}
+#mascara_imagem_web{
+    width: 300px;
+    height: 300px;
+    order: 1;
+    position: absolute;
+}
+#mascara_imagem_mobile{
+    width: 300px;
+    height: 300px;
+    order: 1;
+    position: absolute;
+    display: none;
+}
+
+.container_buttons{
+    order: 5;
+    position: relative;
+    left: 350px;
+}
+.button{
+    width: 300px;
+    height: 60px;
+    background-color: #8C0303;
+    border-radius: 48px;
+    opacity: 1;  
+    margin-right: 20px;
+}
+.button_style{
+    text-decoration: none;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+@media(max-width: 1024px){
+    .conteudo_section{
+        display: flex;
+        flex-direction: column;
+    }
+    #titulo_section{
+        display: flex;
+        justify-content: center;    
+}
+    #conteudo_imagem{
+        order: 1;
+        display: flex;
+        align-self: center;
+    }
+    #mascara_imagem_mobile{
+        display: block;
+        order: 1;
+        display: flex;
+        align-self: center;
+    }
+    #mascara_imagem_web{
+        display: none;
+    }
+    #conteudo_titulo{
+        order: 2;
+        margin: 0px;
+        width: auto;
+        height: auto;
+        position: relative;
+        left: 0px;
+        display: flex;
+        align-self: center;
+    }
+    .container_buttons{
+        left: 215px;
+    }
+}
+
+@media(max-width: 900px){
+    #conteudo_texto{
+        width: 90%;
+        height: 300px;
+        overflow: auto;
+    }
+    #conteudo_texto::-webkit-scrollbar { 
+        width:10px; 
+        border-radius:10px; 
+        background: #FFFFFF; 
+        border: 1px solid #8C0303; }
+    #conteudo_texto::-webkit-scrollbar-thumb { 
+        border-radius:10px; 
+        background:#8c0303;  }
+    .container_buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .container_buttons{
+        left: 0px;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    #button_link{
+        margin-top: 10px;
+    }
+}
+

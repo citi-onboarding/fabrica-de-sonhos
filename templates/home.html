@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/download.css' %}">
     <link rel="stylesheet" href="{% static 'css/contato.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -41,30 +42,43 @@
         {% endfor %}
         <h1>------FIM DA SEÇÃO------</h1>
 
-    <section id="download"></section>
-        {% get_solo 'core.DownloadMateriais' as download_material %}
-        <H2>Download do material</H2>
-
-        <h3>{{download_material.name}}</h3>
+    <section id="download">    
+        <h1>------INICIO DA SEÇÃO------</h1>
+        <div class="secao_material">
+           <svg id="background_material" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1920.786 1215.456">
+                <path id="União_6" data-name="União 6" d="M-8739.415,1024.85c-42-2.773-100.982-7.77-100.982-7.77S-9071,998.361-9106.886,995.619s-241.82-21.919-388.5-41.415c-23.469-3.121-43.943-6.189-61.738-9.147-1.562.417-.212-40.484-.163-40.558V-186h1920V877.284l.187-.005c.063-.029-.187,58.222-.127,58.481-2.843.758-5.628,1.415-8.684,2.051-35.962,7.461-115.6,15.36-198.2,26.448s-535.822,52.822-535.822,52.822-59.176,5.27-103.844,7.77-79.512,4.328-121.332,4.584q-3.561.022-7.2.022C-8652.64,1029.456-8699.8,1027.466-8739.415,1024.85Z" transform="translate(9557.88 186)" fill="#fff"/>
+            </svg>      
         
-        <p>{{download_material.texto |safe }}</p>
-
-        <img src="{{ download_material.image.url }}" alt="Imagem do material">
-        
-        <h4>{{ download_material.arquivo }}</h4>
-    
-        <a href="{{ download_material.arquivoParaDownload.url }}" download="{{ download_material.name }}">
-            <p>{{ download_material.arquivoParaDownload.url }}</p>
-        </a>
-
-        <h2>Link para teste</h2>
-        <a href="{{ download_material.linkParaTeste }}">
-            <p>Link para o teste</p>
-        </a>
-
+            {% get_solo 'core.DownloadMateriais' as download_material %}
+            <div class="material">       
+                <div id="titulo_section"> <h2>Conteúdo disponível</h2> </div> 
+                <div class="conteudo_section">
+                    <h3 id="conteudo_titulo">{{download_material.name}}</h3>
+                    <div id="conteudo_texto"> </p>{{download_material.texto |safe }}</p> </div>
+                        <img id="conteudo_imagem" src="{{ download_material.image.url }}" alt="Imagem do material">
+                        <img id="mascara_imagem_web" src="../static/image/mascara_web.png" alt="">
+                        <img id="mascara_imagem_mobile" src="../static/image/mascara_mobile.png" alt="">
+                </div>
+                
+                <div class="container_buttons">
+                    <button class="button" id="button_download">
+                        <a class="button_style" href="{{ download_material.arquivoParaDownload.url }}" download="{{ download_material.name }}">
+                            <p>Baixe o PDF sobre "Título"</p>
+                        </a>                    
+                    </button>
+                    <button class="button" id="button_link">
+                        <a class="button_style" href="{{ download_material.linkParaTeste }}">
+                            <p>Faça o teste para saber seu "Título"!</p>
+                        </a>
+                    </button>
+                </div>    
+            </div> 
+        </div>
         <h1>------FIM DA SEÇÃO------</h1>
+    </section>
 
     <section id="contato">
+        <h1>------INICIO DA SEÇÃO------</h1>
         <form action="POST" id="contact-form" class="form_de_contato">
             {% csrf_token %}
             <label for="input-name">Nome:</label>
