@@ -62,16 +62,6 @@ body {
     width: 100%;
 }
 
-#box_menu_hamburguer {
-    position: fixed;
-    display: none;
-    width: 10%;
-}
-
-#menu_hamburguer {
-    width: 100%;
-}
-
 
 /* Quando a tela tiver menos de 1200px, o css que irá rodar será o seguinte: */
 @media (max-width: 1200px) {
@@ -128,14 +118,6 @@ body {
     }
     #logo_fabrica {
         position: fixed;
-        width: 100%;
-    }
-    #box_menu_hamburguer {
-        position: fixed;
-        display: none;
-        width: 10%;
-    }
-    #menu_hamburguer {
         width: 100%;
     }
 }
@@ -200,21 +182,39 @@ body {
         position: fixed;
         width: 100%;
     }
-    #box_menu_hamburguer {
-        display: block;
+    .box_menu_hamburguer {
         position: fixed;
         margin-left: 75%;
         margin-top: 1%;
         width: 7.5%;
+        border: transparent;
+        background: transparent;
     }
     #menu_hamburguer {
         position: fixed;
         width: 100%;
     }
-}
+    .box_botao_sair {
+        position: fixed;
+        margin-left: 75%;
+        margin-top: 1%;
+        width: 7.5%;
+        border: transparent;
+        background: transparent;
+    }
+    #botao_sair {
+        position: fixed;
+        width: 100%;
+    }
+    .remove_button {
+        display: none;
+    }
+    .action_menu_hamburguer {
+        height: 100vh;
+        width: 100vw;
+        background-color: #e8e0d8;
+    }
+    #secoes_box_mobile {
 
-
-/* Quando a tela tiver menos de 600px, o css que irá rodar será o seguinte: */
-@media (max-width: 600px) {
-
+    }
 }

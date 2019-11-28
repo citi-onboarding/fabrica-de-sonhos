@@ -1,23 +1,40 @@
-// const header_navBar = document.querySelector('#header_navbar');
-// const navBar = header_navBar.querySelector('#navBar');
+const header_navBar = document.querySelector('#header_navbar');
+const button_menu_hamburguer = header_navBar.querySelector('.box_menu_hamburguer');
+const button_icon_exit = header_navBar.querySelector('.box_botao_sair');
+const action_div = header_navBar.querySelector('.action_menu_hamburguer');
 
-// const navBar_desktop = navBar.querySelector('#navbar_svg');
-// const navBar_mobile = navBar.querySelector('navbar_svg_mobile');
+function menuHamburguerRemove() {
+    button_menu_hamburguer.classList.add('remove_button');
+}
 
+function menuHamburguerAdd() {
+    button_menu_hamburguer.classList.remove('remove_button');
+}
 
+function iconExitRemove() {
+    button_icon_exit.classList.add('remove_button');
+}
 
-// const displayNavBarDesktop = () => {
-//     navBar_desktop.classList.remove('.display_none');
-// }
+function iconExitAdd() {
+    button_icon_exit.classList.remove('remove_button');
+}
 
-// const doNotDisplayNavBarDesktop = () => {
-//     navBar_desktop.classList.add('.display_none');
-// }
+function changeMenuScreenRemove() {
+    action_div.classList.add('remove_button');
+}
 
-// const displayNavBarMobile = () => {
-//     navBar_mobile.classList.remove('.display_none');
-// }
+function changeMenuScreenAdd() {
+    action_div.classList.remove('remove_button');
+}
 
-// const doNotDisplayNavBarMobile = () => {
-//     navBar_mobile.classList.add('.display_none');
-// }
+button_menu_hamburguer.addEventListener('click', () => {
+    menuHamburguerRemove();
+    iconExitAdd();
+    changeMenuScreenAdd();
+})
+
+button_icon_exit.addEventListener('click', () => {
+    iconExitRemove();
+    menuHamburguerAdd();
+    changeMenuScreenRemove();
+})
