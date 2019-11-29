@@ -32,12 +32,14 @@
         <h2>-- Sobre Nós --</h2>
         <h4>Sobre a Instituição</h4>
         {% get_solo 'core.SobreInstituicao' as sobre_instituicao %}
-        <p>{{ sobre_instituicao.sobre }} </p>
+        <div class="texto"><p id="texto_sobre">{{ sobre_instituicao.sobre }} </p></div>
         <h4>Nossos Valores</h4>
         {% for elemento in valores %}
             <h5>{{ elemento.valor }}</h5>
-            <img src="{{ elemento.image.url }}" alt="Imagem do Valor">
-            <img src="{{ elemento.gif.url }}" alt="Gif do valor">
+        <div class="valores">
+            <div class="gif"><img id="gif_valor" src="{{ elemento.gif.url }}" alt="Gif do valor"></div>
+            <div class="image"><img id="image_valor" src="{{ elemento.image.url }}" alt="Imagem do Valor"></div>  
+        </div>
         {% endfor %}
         <h1>------FIM DA SEÇÃO------</h1>
 

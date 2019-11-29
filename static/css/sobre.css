@@ -1,0 +1,39 @@
+.texto{
+    width: 100%;
+}
+#texto_sobre{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-self: center;
+}
+
+
+
+.valores{
+    display: none;
+    justify-content: end;
+    width: auto;
+    height: auto;
+}
+.image{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: end;
+}
+.gif{
+    width: auto;
+    height: auto;
+
+}
+#image_valor{
+    width: 100px;
+    height: 100x;
+    position: relative; 
+}
+#gif_valor{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
