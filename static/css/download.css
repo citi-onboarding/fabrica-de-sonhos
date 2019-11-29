@@ -72,6 +72,11 @@
     color: #FFFFFF;
     text-align: center;
 }
+.arrow_button{
+    position: relative;
+    left: 620px;
+    top: 60px;
+}
 
 
 @media(max-width: 1024px){
@@ -110,6 +115,10 @@
     .container_buttons{
         left: 215px;
     }
+    .arrow_button{
+        left: 85%;
+        top: 60px;
+    }
 }
 
 @media(max-width: 900px){
@@ -138,6 +147,10 @@
     }
     #button_link{
         margin-top: 10px;
+    }
+    .arrow_button{
+        left: 70%;
+        top: 60px;
     }
 }
 
