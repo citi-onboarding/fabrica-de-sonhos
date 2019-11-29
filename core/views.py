@@ -30,12 +30,13 @@ def index(request):
 def email(request):
     nome = request.POST.get('name')
     email = request.POST.get('email')
+    telefone = request.POST.get('telephone')
     assunto = request.POST.get('subject')
     mensagem = request.POST.get('message')
 
 
     subject = assunto
-    body = f'Nome: {nome}\nAssunto: {assunto}\nEmail: {email}\nMensagem: {mensagem}'
+    body = f'Nome: {nome}\nAssunto: {assunto}\nEmail: {email}\nTelefone: {telefone}\nMensagem: {mensagem}'
 
     mail  = EmailMessage(subject, body, 'desafioPTAdjangoCITi2019.2@gmail.com', ['desafioPTAdjangoCITi2019.2@gmail.com', 'rmr@cin.ufpe.br'])
     result = mail.send()
