@@ -2,6 +2,7 @@
 {% load solo_tags %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,57 +13,336 @@
     <link rel="stylesheet" href="{% static 'css/download.css' %}">
     <link rel="stylesheet" href="{% static 'css/contato.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+
     <title>Document</title>
 </head>
+
 <body>
-    <header id="navBar"></header>
+    <header id="header_navbar">
+        <nav id="navBar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1921 183.754" id="navbar_svg">
+                <path id="Subtração_9" data-name="Subtração 9"
+                    d="M-3789.824-276.245h-.019c-15.133,0-30.438-.142-45.491-.422-27.036-1.61-67.9-7.315-115.223-13.92h-.02l-.129-.019-.029,0-.011,0-.016,0c-45.157-6.3-96.34-13.446-150.7-19.289-63.091-6.784-117.792-10.422-167.229-11.123-10.164-.145-20.551-.218-30.873-.218-30.645,0-62.438.644-94.5,1.913-27.534,1.09-56.125,2.676-84.98,4.716-52.9,3.737-97.776,8.334-130.542,11.69h-.014l-.072.007-.02,0-.273.027-.26.027c-6.76.693-14.423,1.478-21.159,2.144-39.2,1.6-77.377,3.87-116.708,6.931-34.367,2.674-64.822,5.578-91.692,8.14h-.042l-.227.021c-25.106,2.392-48.819,4.652-70.866,6.256-24.413,1.777-44.7,2.605-63.833,2.607a591.883,591.883,0,0,1-99.9-8.36c-18.4-3.073-37.336-7-57.885-11.994-20.974-5.1-43.041-11.179-67.461-18.577.005-.021-.163-1.346-.5-3.939V-460h1921v139.576l-.054.008-.1.014h-.008c-55.389,8.231-131.248,19.5-219.133,28.523-22.627,2.321-45.223,4.4-67.163,6.194-23.905,1.949-47.858,3.616-71.193,4.957-25.058,1.438-50.214,2.545-74.77,3.29C-3738.077-276.645-3764.289-276.245-3789.824-276.245Z"
+                    transform="translate(5200.5 459.999)" fill="#e8e0d8" />
+            </svg>
+        </nav>
+        <div id="fix_navbar"></div>
+
+        <!-- LOGO DA FÁBRICA -->
+        <div id="box_logo_fabrica">
+            <svg id="camada 1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1853.84 547.86"
+                id="logo_fabrica">
+                <defs>
+                    <style>
+                        .cls-1,
+                        .cls-12,
+                        .cls-2,
+                        .cls-8 {
+                            fill: #8c0303;
+                        }
+
+                        .cls-2 {
+                            font-size: 337.77px;
+                        }
+
+                        .cls-12,
+                        .cls-2,
+                        .cls-8 {
+                            font-family: PublicaSlab-Regular, Publica Slab;
+                        }
+
+                        .cls-3 {
+                            letter-spacing: -0.02em;
+                        }
+
+                        .cls-4 {
+                            letter-spacing: -0.02em;
+                        }
+
+                        .cls-5 {
+                            letter-spacing: 0em;
+                        }
+
+                        .cls-6 {
+                            letter-spacing: -0.03em;
+                        }
+
+                        .cls-7 {
+                            letter-spacing: 0em;
+                        }
+
+                        .cls-8 {
+                            font-size: 318.45px;
+                        }
+
+                        .cls-9 {
+                            letter-spacing: -0.02em;
+                        }
+
+                        .cls-10 {
+                            letter-spacing: -0.02em;
+                        }
+
+                        .cls-11 {
+                            letter-spacing: 0em;
+                        }
+
+                        .cls-12 {
+                            font-size: 97.98px;
+                        }
+
+                        .cls-13 {
+                            letter-spacing: -0.02em;
+                        }
+                    </style>
+                </defs>
+                <title>LOGO(SVG)</title>
+                <ellipse class="cls-1" cx="51.32" cy="96.89" rx="51.32" ry="51.15" />
+                <path class="cls-1"
+                    d="M418.59,1218.2a49,49,0,0,1-.5,7.11A51.33,51.33,0,0,1,316,1218.2a51.94,51.94,0,0,1,.52-7.33,50.48,50.48,0,0,1,7.17-19.63,51.41,51.41,0,0,1,85.36-2.82A50.8,50.8,0,0,1,418.59,1218.2Z"
+                    transform="translate(-76.02 -769.05)" />
+                <path class="cls-1"
+                    d="M658.53,866a50.43,50.43,0,0,1-.5,7.11A51.33,51.33,0,0,1,555.89,866a53.59,53.59,0,0,1,.52-7.33A50.64,50.64,0,0,1,563.58,839,51.43,51.43,0,0,1,649,836.17,50.8,50.8,0,0,1,658.53,866Z"
+                    transform="translate(-76.02 -769.05)" />
+                <path class="cls-1" d="M319.08,1182.55,198,1102l50.28-38.86c4.76,4.47,12,10.85,30.39,21.26"
+                    transform="translate(-76.02 -769.05)" />
+                <path class="cls-1" d="M413,1178.13" transform="translate(-76.02 -769.05)" />
+                <path class="cls-1"
+                    d="M486,1063.09c-5.78,5.44-22,20.52-55.74,33.34A176.62,176.62,0,0,1,362.61,1108a179.5,179.5,0,0,1-84-23.55c-18.38-10.42-25.63-16.79-30.39-21.27L198,1102l121.13,80.6s42.46-55.23,97.84,0h0l125-75.92Z"
+                    transform="translate(-76.02 -769.05)" />
+                <path class="cls-1" d="M416.92,1182.55" transform="translate(-76.02 -769.05)" />
+                <path class="cls-1" d="M319.08,1182.55" transform="translate(-76.02 -769.05)" />
+                <path class="cls-1"
+                    d="M600,922.15A51.14,51.14,0,0,1,552.54,852c-24-19.83-53.63-30.83-83.64-27.92-11.47,1.1-24.89,4.92-38.24,11.66a116.07,116.07,0,0,0-26.38,18.81c-36.17,33.54-67.08,7.62-76.68-2.33a58.51,58.51,0,0,0-9-7.75c-17.85-12.26-37.25-18.88-53-20.39-30-2.91-59.59,8.09-83.64,27.92a51.16,51.16,0,0,1-47.47,70.16,146.66,146.66,0,0,0-7.22,45.29c0,4.47.2,8.91.6,13.29a145,145,0,0,0,28.49,74l2.73,3.52L185.38,1092l5.51-4.25,47.18-36.41-23-29.59-4.16-5.35a80,80,0,0,1-17.2-46c0-1-.06-2-.06-2.94,0-44.1,28.47-71.48,72.72-71.48,13.55,0,34.57,10.26,53.92,27.29a80,80,0,0,0,16.57,11.47c41.19,20.86,73.15-7.63,73.15-7.63C430.49,907.78,453.64,896,468.18,896c44.25,0,72.7,27.38,72.7,71.48,0,1,0,2,0,2.94a80,80,0,0,1-17.21,46l-4.16,5.35-23,29.59,46.91,36.8,5.47,4.27,26.53-34.14,2.73-3.52a145,145,0,0,0,28.49-74c.4-4.38.6-8.82.6-13.29A146.66,146.66,0,0,0,600,922.15Z"
+                    transform="translate(-76.02 -769.05)" /><text class="cls-2" transform="translate(637.22 285.75)">
+                    <tspan class="cls-3">f</tspan>
+                    <tspan x="108.42" y="0">á</tspan>
+                    <tspan class="cls-4" x="333.71" y="0">b</tspan>
+                    <tspan class="cls-5" x="553.6" y="0">r</tspan>
+                    <tspan class="cls-6" x="693.09" y="0">i</tspan>
+                    <tspan class="cls-7" x="791.04" y="0">ca</tspan>
+                </text><text class="cls-8" transform="translate(764.82 477.8)">s<tspan class="cls-9" x="148.71" y="0">o
+                    </tspan>
+                    <tspan x="332.46" y="0">n</tspan>
+                    <tspan class="cls-10" x="542.31" y="0">h</tspan>
+                    <tspan class="cls-11" x="746.76" y="0">os</tspan>
+                </text><text class="cls-12" transform="translate(647.02 366.76)">
+                    <tspan class="cls-13">d</tspan>
+                    <tspan x="63" y="0">e</tspan>
+                </text>
+            </svg>
+        </div>
+        <div id="secoes_box">
+            <div>
+                <a href="#galeria" class="secoes">início</a>
+            </div>
+            <div>
+                <a href="#sobre" class="secoes">sobre nós</a>
+            </div>
+            <div>
+                <a href="#download" class="secoes">conteúdo</a>
+            </div>
+            <div>
+                <a href="#contato" class="secoes">contato</a>
+            </div>
+        </div>
+
+        <!-- BOTÃO MENU HAMBURGUER -->
+        <button class="box_menu_hamburguer">
+            <?xml version="1.0" ?>
+            <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32"
+                class="menu_hamburguer" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
+                    fill="#8C0303" />
+            </svg>
+        </button>
+
+        <!-- PARTE QUE APARECE QUANDO O MENU HAMBURGUER DA NAVBAR É APERTADO -->
+        <div class="action_menu_hamburguer remove_button">
+            <div class="secoes_box_mobile">
+                <div>
+                    <a href="#galeria" class="secoes_mobile">início</a>
+                </div>
+                <div>
+                    <a href="#sobre" class="secoes_mobile">sobre nós</a>
+                </div>
+                <div>
+                    <a href="#download" class="secoes_mobile">conteúdo</a>
+                </div>
+                <div>
+                    <a href="#contato" class="secoes_mobile">contato</a>
+                </div>
+            </div>
+
+            <!-- BOTÃO SAIR -->
+            <button class="box_botao_sair remove_button">
+                <?xml version="1.0" ?>
+                <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                    enable-background="new 0 0 128 128" id="Layer_1" version="1.1" viewBox="0 0 128 128" id="botao_sair"
+                    xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M81.646,64l22.248-22.249c3.48-3.48,3.474-9.131-0.019-12.623l-5.006-5.005  c-3.489-3.49-9.142-3.499-12.622-0.019L64,46.354L41.753,24.106c-3.484-3.483-9.133-3.472-12.624,0.018l-5.005,5.005  c-3.491,3.492-3.501,9.14-0.018,12.623L46.354,64L24.108,86.246c-3.483,3.484-3.472,9.133,0.018,12.623l5.005,5.006  c3.492,3.492,9.14,3.502,12.623,0.018L64,81.647l22.247,22.246c3.48,3.481,9.131,3.475,12.622-0.019l5.006-5.006  c3.489-3.489,3.498-9.142,0.019-12.622L81.646,64z"
+                        fill="#8C0303" /></svg>
+            </button>
+
+            <!-- LOGO DA FÁBRICA -->
+            <div id="box_logo_fabrica_mobile">
+                <svg id="camada 1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1853.84 547.86"
+                    class="logo_fabrica_mobile remove_button">
+                    <defs>
+                        <style>
+                            .cls-1,
+                            .cls-12,
+                            .cls-2,
+                            .cls-8 {
+                                fill: #8c0303;
+                            }
+
+                            .cls-2 {
+                                font-size: 337.77px;
+                            }
+
+                            .cls-12,
+                            .cls-2,
+                            .cls-8 {
+                                font-family: PublicaSlab-Regular, Publica Slab;
+                            }
+
+                            .cls-3 {
+                                letter-spacing: -0.02em;
+                            }
+
+                            .cls-4 {
+                                letter-spacing: -0.02em;
+                            }
+
+                            .cls-5 {
+                                letter-spacing: 0em;
+                            }
+
+                            .cls-6 {
+                                letter-spacing: -0.03em;
+                            }
+
+                            .cls-7 {
+                                letter-spacing: 0em;
+                            }
+
+                            .cls-8 {
+                                font-size: 318.45px;
+                            }
+
+                            .cls-9 {
+                                letter-spacing: -0.02em;
+                            }
+
+                            .cls-10 {
+                                letter-spacing: -0.02em;
+                            }
+
+                            .cls-11 {
+                                letter-spacing: 0em;
+                            }
+
+                            .cls-12 {
+                                font-size: 97.98px;
+                            }
+
+                            .cls-13 {
+                                letter-spacing: -0.02em;
+                            }
+                        </style>
+                    </defs>
+                    <title>LOGO(SVG)</title>
+                    <ellipse class="cls-1" cx="51.32" cy="96.89" rx="51.32" ry="51.15" />
+                    <path class="cls-1"
+                        d="M418.59,1218.2a49,49,0,0,1-.5,7.11A51.33,51.33,0,0,1,316,1218.2a51.94,51.94,0,0,1,.52-7.33,50.48,50.48,0,0,1,7.17-19.63,51.41,51.41,0,0,1,85.36-2.82A50.8,50.8,0,0,1,418.59,1218.2Z"
+                        transform="translate(-76.02 -769.05)" />
+                    <path class="cls-1"
+                        d="M658.53,866a50.43,50.43,0,0,1-.5,7.11A51.33,51.33,0,0,1,555.89,866a53.59,53.59,0,0,1,.52-7.33A50.64,50.64,0,0,1,563.58,839,51.43,51.43,0,0,1,649,836.17,50.8,50.8,0,0,1,658.53,866Z"
+                        transform="translate(-76.02 -769.05)" />
+                    <path class="cls-1" d="M319.08,1182.55,198,1102l50.28-38.86c4.76,4.47,12,10.85,30.39,21.26"
+                        transform="translate(-76.02 -769.05)" />
+                    <path class="cls-1" d="M413,1178.13" transform="translate(-76.02 -769.05)" />
+                    <path class="cls-1"
+                        d="M486,1063.09c-5.78,5.44-22,20.52-55.74,33.34A176.62,176.62,0,0,1,362.61,1108a179.5,179.5,0,0,1-84-23.55c-18.38-10.42-25.63-16.79-30.39-21.27L198,1102l121.13,80.6s42.46-55.23,97.84,0h0l125-75.92Z"
+                        transform="translate(-76.02 -769.05)" />
+                    <path class="cls-1" d="M416.92,1182.55" transform="translate(-76.02 -769.05)" />
+                    <path class="cls-1" d="M319.08,1182.55" transform="translate(-76.02 -769.05)" />
+                    <path class="cls-1"
+                        d="M600,922.15A51.14,51.14,0,0,1,552.54,852c-24-19.83-53.63-30.83-83.64-27.92-11.47,1.1-24.89,4.92-38.24,11.66a116.07,116.07,0,0,0-26.38,18.81c-36.17,33.54-67.08,7.62-76.68-2.33a58.51,58.51,0,0,0-9-7.75c-17.85-12.26-37.25-18.88-53-20.39-30-2.91-59.59,8.09-83.64,27.92a51.16,51.16,0,0,1-47.47,70.16,146.66,146.66,0,0,0-7.22,45.29c0,4.47.2,8.91.6,13.29a145,145,0,0,0,28.49,74l2.73,3.52L185.38,1092l5.51-4.25,47.18-36.41-23-29.59-4.16-5.35a80,80,0,0,1-17.2-46c0-1-.06-2-.06-2.94,0-44.1,28.47-71.48,72.72-71.48,13.55,0,34.57,10.26,53.92,27.29a80,80,0,0,0,16.57,11.47c41.19,20.86,73.15-7.63,73.15-7.63C430.49,907.78,453.64,896,468.18,896c44.25,0,72.7,27.38,72.7,71.48,0,1,0,2,0,2.94a80,80,0,0,1-17.21,46l-4.16,5.35-23,29.59,46.91,36.8,5.47,4.27,26.53-34.14,2.73-3.52a145,145,0,0,0,28.49-74c.4-4.38.6-8.82.6-13.29A146.66,146.66,0,0,0,600,922.15Z"
+                        transform="translate(-76.02 -769.05)" /><text class="cls-2" transform="translate(637.22 285.75)">
+                        <tspan class="cls-3">f</tspan>
+                        <tspan x="108.42" y="0">á</tspan>
+                        <tspan class="cls-4" x="333.71" y="0">b</tspan>
+                        <tspan class="cls-5" x="553.6" y="0">r</tspan>
+                        <tspan class="cls-6" x="693.09" y="0">i</tspan>
+                        <tspan class="cls-7" x="791.04" y="0">ca</tspan>
+                    </text><text class="cls-8" transform="translate(764.82 477.8)">s<tspan class="cls-9" x="148.71" y="0">o
+                        </tspan>
+                        <tspan x="332.46" y="0">n</tspan>
+                        <tspan class="cls-10" x="542.31" y="0">h</tspan>
+                        <tspan class="cls-11" x="746.76" y="0">os</tspan>
+                    </text><text class="cls-12" transform="translate(647.02 366.76)">
+                        <tspan class="cls-13">d</tspan>
+                        <tspan x="63" y="0">e</tspan>
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </header>
 
     <section id="galeria"></section>
-        <h2>Galeria de eventos</h2>
-        <h4>AQUI VAI FICAR O CARROSSEL DE IMAGENS</h4>
-        {% for imagem in imagensGaleria %}
-            <img src="{{ imagem.image.url }}" alt="Imagem do evento">
-        {% endfor %}
-        {% get_solo 'core.MensagemCoracao' as mensagem_do_coracao %}
-        <p>{{ mensagem_do_coracao.message }}</p>
-        <h1>------FIM DA SEÇÃO------</h1>
+    <h2>Galeria de eventos</h2>
+    <h4>AQUI VAI FICAR O CARROSSEL DE IMAGENS</h4>
+    {% for imagem in imagensGaleria %}
+    <img src="{{ imagem.image.url }}" alt="Imagem do evento">
+    {% endfor %}
+    {% get_solo 'core.MensagemCoracao' as mensagem_do_coracao %}
+    <p>{{ mensagem_do_coracao.message }}</p>
+    <h1>------FIM DA SEÇÃO------</h1>
 
 
     <section id="sobre"></section>
-        <h2>-- Sobre Nós --</h2>
-        <h4>Sobre a Instituição</h4>
-        {% get_solo 'core.SobreInstituicao' as sobre_instituicao %}
-        <p>{{ sobre_instituicao.sobre }} </p>
-        <h4>Nossos Valores</h4>
-        {% for elemento in valores %}
-            <h5>{{ elemento.valor }}</h5>
-            <img src="{{ elemento.image.url }}" alt="Imagem do Valor">
-            <img src="{{ elemento.gif.url }}" alt="Gif do valor">
-        {% endfor %}
-        <h1>------FIM DA SEÇÃO------</h1>
+    <h2>-- Sobre Nós --</h2>
+    <h4>Sobre a Instituição</h4>
+    {% get_solo 'core.SobreInstituicao' as sobre_instituicao %}
+    <p>{{ sobre_instituicao.sobre }} </p>
+    <h4>Nossos Valores</h4>
+    {% for elemento in valores %}
+    <h5>{{ elemento.valor }}</h5>
+    <img src="{{ elemento.image.url }}" alt="Imagem do Valor">
+    <img src="{{ elemento.gif.url }}" alt="Gif do valor">
+    {% endfor %}
+    <h1>------FIM DA SEÇÃO------</h1>
 
     <section id="download"></section>
-        {% get_solo 'core.DownloadMateriais' as download_material %}
-        <H2>Download do material</H2>
+    {% get_solo 'core.DownloadMateriais' as download_material %}
+    <H2>Download do material</H2>
 
-        <h3>{{download_material.name}}</h3>
-        
-        <p>{{download_material.texto |safe }}</p>
+    <h3>{{download_material.name}}</h3>
 
-        <img src="{{ download_material.image.url }}" alt="Imagem do material">
-        
-        <h4>{{ download_material.arquivo }}</h4>
-    
-        <a href="{{ download_material.arquivoParaDownload.url }}" download="{{ download_material.name }}">
-            <p>{{ download_material.arquivoParaDownload.url }}</p>
-        </a>
+    <p>{{download_material.texto |safe }}</p>
 
-        <h2>Link para teste</h2>
-        <a href="{{ download_material.linkParaTeste }}">
-            <p>Link para o teste</p>
-        </a>
+    <img src="{{ download_material.image.url }}" alt="Imagem do material">
 
-        <h1>------FIM DA SEÇÃO------</h1>
+    <h4>{{ download_material.arquivo }}</h4>
+
+    <a href="{{ download_material.arquivoParaDownload.url }}" download="{{ download_material.name }}">
+        <p>{{ download_material.arquivoParaDownload.url }}</p>
+    </a>
+
+    <h2>Link para teste</h2>
+    <a href="{{ download_material.linkParaTeste }}">
+        <p>Link para o teste</p>
+    </a>
+
+    <h1>------FIM DA SEÇÃO------</h1>
 
     <section id="contato">
         <form action="POST" id="contact-form" class="form_de_contato">
@@ -85,14 +365,14 @@
     </section>
 
     <!-- Importação do script do Javascript para que o JQuery funcione -->
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
     <script type="text/javascript" src="{% static 'Javascript/main.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Javascript/navbar.js' %}"></script>
 
     <footer id="footer"></footer>
 
 </body>
+
 </html>
