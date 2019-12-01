@@ -21,6 +21,10 @@
     color: #E2E0DE;
     margin-left: 50px;
 }
+select:invalid{
+    font: Italic 20px Muli;
+    color: #8C0303;
+}
 
 .select_options{ 
     width: 700px;
@@ -29,7 +33,11 @@
     margin-top: 20px;
     margin-left: 50px;
     font-size: 17px;
+    background: url(../arrow_select.svg) no-repeat #eeeeee;
+    -webkit-appearance: none;
+    background-position: 660px center;
 } 
+
 .contato_send{
     width: 700px;
     height: 40px;
@@ -55,7 +63,7 @@
     border-radius: 30px;
     margin-top: 20px;
     position: relative;
-    left: 50px;
+    left: 600px;
     text-align: center;
     font: Bold 22px Muli;
     color: #8C0303;
@@ -92,4 +100,21 @@
         margin-top: 20px;
         margin-left: 50px;
      } 
+     #send_button{
+        position: relative;
+        left: 60%;
+     }
+}
+@media(max-width:800px){
+    #send_button{
+        position: relative;
+        left: 60%;
+     }
+
+}
+@media(max-width:500px){
+    #send_button{
+        position: relative;
+        left: 30%;
+     }
 }
