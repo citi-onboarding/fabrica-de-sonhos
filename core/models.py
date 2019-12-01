@@ -48,7 +48,6 @@ class MensagemCoracao(SingletonModel):
 
 # Seção 'Download de materiais"
 class DownloadMateriais(SingletonModel):
-    
     name = models.CharField('Tópico_da_semana', max_length=200, default='Tópico semanal')
     texto = RichTextField(null=True, blank=True, verbose_name="Texto")
     image = models.ImageField(upload_to='imagensMaterial/', verbose_name='Imagem', null=True)
@@ -60,3 +59,15 @@ class DownloadMateriais(SingletonModel):
 
     def __str__(self):
         return self.name
+
+# Footer
+class Footer(SingletonModel):
+    instagram = models.URLField('instagram', max_length=254, null=True, blank=True)
+    telefone = models.CharField('telefone', max_length=20, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Informações rodapé'
+        verbose_name_plural = 'Informações rodapé'
+
+    def __str__(self):
+        return self.telefone

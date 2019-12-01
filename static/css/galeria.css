@@ -1,0 +1,10 @@
+#galeria {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+#carrossel {
+    background-color: black;
+    width: 100%;
+}
