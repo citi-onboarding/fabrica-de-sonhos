@@ -3,17 +3,22 @@
     font-family: "Bold", "Muli";
     font-size: 25px;
     color: #8C0303;
+    position: relative;
+    top: 20px;
     
 }
 .texto{
     width: 100%;
+    display: flex;
     justify-content: center;
 }
 #texto_sobre{
-    display: flex;
-    text-align: center;
+    font-family: "Light", "Muli";
+    font-size: 15px;
+    text-align: left;
     width: 50%;
     height: auto;
+
 }
 
 .image_valor{
