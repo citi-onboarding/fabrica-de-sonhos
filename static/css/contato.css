@@ -19,11 +19,12 @@
     font-family: "Bold", "Muli";
     font-size: 40px;
     color: #E2E0DE;
-    margin-left: 50px;
+    padding-left: 50px;
 }
 select:invalid{
     font: Italic 20px Muli;
     color: #8C0303;
+    padding-left: 20px;
 }
 
 .select_options{ 
@@ -35,7 +36,7 @@ select:invalid{
     font-size: 17px;
     background: url(../arrow_select.svg) no-repeat #eeeeee;
     -webkit-appearance: none;
-    background-position: 660px center;
+    background-position-x: 95%;
 } 
 
 .contato_send{
@@ -81,14 +82,14 @@ select:invalid{
 }
 
 @media(max-width:1024px){
-    #titulo_section{
-        /* text-align: center; */
+    /* #titulo_section{
+        text-align: center;
         font-family: "Bold", "Muli";
         font-size: 30px;
         color: #E2E0DE;
         position: relative;
         left: 25%;
-    }
+    } */
     .contato_send{
         width: 70%;
         margin-top: 20px;
