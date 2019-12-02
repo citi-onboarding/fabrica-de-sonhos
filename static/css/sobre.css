@@ -1,3 +1,17 @@
+#sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+.titulo_texto{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
 #titulo_sobre{
     text-align: center;
     font-family: "Bold", "Muli";
@@ -5,12 +19,13 @@
     color: #8C0303;
     position: relative;
     top: 20px;
-    
+    order: 0;
 }
 .texto{
     width: 100%;
     display: flex;
     justify-content: center;
+    order: 1;
 }
 #texto_sobre{
     font-family: "Light", "Muli";
@@ -18,29 +33,51 @@
     text-align: left;
     width: 50%;
     height: auto;
-
 }
 
-.image_valor{
-    width: 100px;
-    height: 100x;
-    position: relative;   
-    
+
+
+/* Valores */
+
+.container_valores{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
-.gif_valor{
+
+#valores{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+}
+.valor{
     width: 100px;
     height: 100px;
-    position: absolute;
 }
-
-
+.image_valor{
+    position: relative; 
+    z-index: 1;
+}
+.gif_valor{
+    position: absolute;
+    z-index: 1;
+}
 #valor_texto{
-    text-align: left;
+    width: 125px;
     font-family: "ExtraBold", "Muli";
     font-size: 15px;
     color: #8C0303;
+
 }
+
 #arrow_down_sobre{
     position: relative;
-    left: 50%;
+    display: flex;
+    align-items: center;
 }
+
+.image_valor:hover{
+    z-index: 0;
+}
+
