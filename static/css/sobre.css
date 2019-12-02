@@ -1,10 +1,10 @@
+
 #sobre{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 100%;
-    
 }
 .titulo_texto{
     display: flex;
@@ -41,8 +41,6 @@
 
 .container_valores{
     padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 #valores{
@@ -51,17 +49,18 @@
     align-items: center;
     width: 60%;
 }
+
 .valor{
     width: 100px;
     height: 100px;
 }
 .image_valor{
     position: relative; 
-    z-index: 1;
+    display: block;
 }
 .gif_valor{
     position: absolute;
-    z-index: 1;
+    display: block;
 }
 #valor_texto{
     width: 125px;
@@ -75,9 +74,17 @@
     position: relative;
     display: flex;
     align-items: center;
+    margin-top: 15%;
 }
 
-.image_valor:hover{
-    z-index: 0;
+
+@media(max-width: 1024px){
+    #valores{
+        flex-wrap: wrap;
+        align-items: initial;
+    }
+    #arrow_down_sobre{
+        align-items: flex-end;
+    }
 }
 
