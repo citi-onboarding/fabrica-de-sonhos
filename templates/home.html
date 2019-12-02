@@ -301,11 +301,11 @@
     </header>
 
     <section id="galeria">
-        <!-- <div id="carrossel">
+        <div id="carrossel">
             {% for imagem in imagensGaleria %}
             <img src="{{ imagem.image.url }}" alt="Imagem do evento">
             {% endfor %}
-        </div> -->
+        </div>
         <div id="coracao">
             {% get_solo 'core.MensagemCoracao' as mensagem_do_coracao %}
             <p>{{ mensagem_do_coracao.message }}</p>
