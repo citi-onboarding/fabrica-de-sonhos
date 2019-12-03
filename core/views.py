@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import SobreInstituicao, Valores, ImagensGaleria, MensagemCoracao, DownloadMateriais
+from .models import SobreInstituicao, Valores, ImagensGaleria, MensagemCoracao, DownloadMateriais, Footer
 from django.http import HttpResponse
 from django.core.mail import EmailMessage
 
@@ -22,7 +22,10 @@ class HomeView (generic.TemplateView):
         context["downloadMateriais"] = DownloadMateriais.objects.all()
         return context
 
+        # Footer
+        context["footer"] = Footer.objects.all()
 
+# Contato
 def index(request):
     return render(request, 'home.html')
 

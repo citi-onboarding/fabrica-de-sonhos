@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="{% static 'css/download.css' %}">
     <link rel="stylesheet" href="{% static 'css/contato.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'slick/slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'slick/slick/slick-theme.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-
     <title>Document</title>
 </head>
 
@@ -276,14 +277,16 @@
                     <path class="cls-1" d="M319.08,1182.55" transform="translate(-76.02 -769.05)" />
                     <path class="cls-1"
                         d="M600,922.15A51.14,51.14,0,0,1,552.54,852c-24-19.83-53.63-30.83-83.64-27.92-11.47,1.1-24.89,4.92-38.24,11.66a116.07,116.07,0,0,0-26.38,18.81c-36.17,33.54-67.08,7.62-76.68-2.33a58.51,58.51,0,0,0-9-7.75c-17.85-12.26-37.25-18.88-53-20.39-30-2.91-59.59,8.09-83.64,27.92a51.16,51.16,0,0,1-47.47,70.16,146.66,146.66,0,0,0-7.22,45.29c0,4.47.2,8.91.6,13.29a145,145,0,0,0,28.49,74l2.73,3.52L185.38,1092l5.51-4.25,47.18-36.41-23-29.59-4.16-5.35a80,80,0,0,1-17.2-46c0-1-.06-2-.06-2.94,0-44.1,28.47-71.48,72.72-71.48,13.55,0,34.57,10.26,53.92,27.29a80,80,0,0,0,16.57,11.47c41.19,20.86,73.15-7.63,73.15-7.63C430.49,907.78,453.64,896,468.18,896c44.25,0,72.7,27.38,72.7,71.48,0,1,0,2,0,2.94a80,80,0,0,1-17.21,46l-4.16,5.35-23,29.59,46.91,36.8,5.47,4.27,26.53-34.14,2.73-3.52a145,145,0,0,0,28.49-74c.4-4.38.6-8.82.6-13.29A146.66,146.66,0,0,0,600,922.15Z"
-                        transform="translate(-76.02 -769.05)" /><text class="cls-2" transform="translate(637.22 285.75)">
+                        transform="translate(-76.02 -769.05)" /><text class="cls-2"
+                        transform="translate(637.22 285.75)">
                         <tspan class="cls-3">f</tspan>
                         <tspan x="108.42" y="0">á</tspan>
                         <tspan class="cls-4" x="333.71" y="0">b</tspan>
                         <tspan class="cls-5" x="553.6" y="0">r</tspan>
                         <tspan class="cls-6" x="693.09" y="0">i</tspan>
                         <tspan class="cls-7" x="791.04" y="0">ca</tspan>
-                    </text><text class="cls-8" transform="translate(764.82 477.8)">s<tspan class="cls-9" x="148.71" y="0">o
+                    </text><text class="cls-8" transform="translate(764.82 477.8)">s<tspan class="cls-9" x="148.71"
+                            y="0">o
                         </tspan>
                         <tspan x="332.46" y="0">n</tspan>
                         <tspan class="cls-10" x="542.31" y="0">h</tspan>
@@ -297,54 +300,99 @@
         </div>
     </header>
 
-    <section id="galeria"></section>
-    <h2>Galeria de eventos</h2>
-    <h4>AQUI VAI FICAR O CARROSSEL DE IMAGENS</h4>
-    {% for imagem in imagensGaleria %}
-    <img src="{{ imagem.image.url }}" alt="Imagem do evento">
-    {% endfor %}
-    {% get_solo 'core.MensagemCoracao' as mensagem_do_coracao %}
-    <p>{{ mensagem_do_coracao.message }}</p>
-    <h1>------FIM DA SEÇÃO------</h1>
+    <section id="galeria">
+        <div id="carrossel">
+            {% for imagem in imagensGaleria %}
+            <img src="{{ imagem.image.url }}" alt="Imagem do evento" id="imagens">
+            {% endfor %}
+        </div>
+            <div class="coracao_box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 204.51 160.274" id="coracao_branco">
+                    <path id="União_2" data-name="União 2" d="M101.022,160.23A18.073,18.073,0,0,1,84.253,142.34a18.4,18.4,0,0,1,.183-2.586,18.008,18.008,0,0,1,35.835,2.586,17.393,17.393,0,0,1-.175,2.509,18.052,18.052,0,0,1-17.807,15.425C101.868,160.274,101.447,160.259,101.022,160.23ZM85.352,129.78,42.825,101.343l17.631-13.7h0l.02-.015c1.671,1.577,4.213,3.828,10.67,7.5l.016.039a62.781,62.781,0,0,0,29.454,8.288,61.737,61.737,0,0,0,23.751-4.082c11.846-4.523,17.54-9.844,19.569-11.763l19.65,15.379L119.7,129.78C100.259,110.294,85.352,129.78,85.352,129.78ZM164.1,96.461,147.627,83.477l8.075-10.44,1.46-1.887a28.309,28.309,0,0,0,6.042-16.23V53.883c0-15.559-9.988-25.219-25.524-25.219-5.1,0-13.232,4.156-20.422,10.976,0,0-11.221,10.052-25.682,2.692a28.069,28.069,0,0,1-5.817-4.047c-6.793-6.008-14.173-9.628-18.93-9.628-15.536,0-25.531,9.66-25.531,25.219,0,.332.021.685.021,1.037a28.306,28.306,0,0,0,6.039,16.229l1.46,1.888,8.075,10.44L40.329,96.316l-1.934,1.5-9.23-11.9-.958-1.242a51.3,51.3,0,0,1-10-26.108c-.14-1.545-.211-3.112-.211-4.689a51.976,51.976,0,0,1,2.535-15.979,17.938,17.938,0,0,0,14.865-7.935,18.126,18.126,0,0,0,1.8-16.818c8.444-7,18.832-10.877,29.365-9.851a40.929,40.929,0,0,1,18.607,7.194,20.564,20.564,0,0,1,3.16,2.734c3.371,3.511,14.222,12.656,26.921.822A40.752,40.752,0,0,1,124.508,7.4a38.621,38.621,0,0,1,13.425-4.114C148.47,2.263,158.873,6.144,167.3,13.14a18.118,18.118,0,0,0,1.8,16.817,17.93,17.93,0,0,0,14.865,7.932A51.973,51.973,0,0,1,186.5,53.883c0,1.577-.07,3.144-.21,4.689a51.307,51.307,0,0,1-10,26.108l-.958,1.242-9.314,12.045Zm21.148-60.377a18.073,18.073,0,0,1-16.769-18,18.98,18.98,0,0,1,.183-2.586A18.02,18.02,0,1,1,186.51,36.128C186.091,36.128,185.669,36.114,185.244,36.084ZM0,18.058A18.018,18.018,0,1,1,18.018,36.1,18.032,18.032,0,0,1,0,18.058Z" transform="translate(0 0)" fill="#e2e0de"/>
+                </svg>
+            </div>
+            <div class="coracao_mensagem_box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 619 160.274" class="remove_button" id="coracao_mensagem">
+                    <g id="Grupo_195" data-name="Grupo 195" transform="translate(-4714 -1471.955)">
+                      <path id="União_9" data-name="União 9" d="M101.022,160.23A18.073,18.073,0,0,1,84.253,142.34a18.4,18.4,0,0,1,.183-2.586,18.008,18.008,0,0,1,35.835,2.586,17.393,17.393,0,0,1-.175,2.509,18.052,18.052,0,0,1-17.807,15.425C101.868,160.274,101.447,160.259,101.022,160.23ZM85.352,129.78,42.825,101.343l17.631-13.7h0l.02-.015c1.671,1.577,4.213,3.828,10.67,7.5l.016.039a62.781,62.781,0,0,0,29.454,8.288,61.737,61.737,0,0,0,23.751-4.082c11.846-4.523,17.54-9.844,19.569-11.763l19.65,15.379L119.7,129.78C100.259,110.294,85.352,129.78,85.352,129.78ZM164.1,96.461,147.627,83.477l8.075-10.44,1.46-1.887a28.309,28.309,0,0,0,6.042-16.23V53.883c0-15.559-9.988-25.219-25.524-25.219-5.1,0-13.232,4.156-20.422,10.976,0,0-11.221,10.052-25.682,2.692a28.069,28.069,0,0,1-5.817-4.047c-6.793-6.008-14.173-9.628-18.93-9.628-15.536,0-25.531,9.66-25.531,25.219,0,.332.021.685.021,1.037a28.306,28.306,0,0,0,6.039,16.229l1.46,1.888,8.075,10.44L40.329,96.316l-1.934,1.5-9.23-11.9-.958-1.242a51.3,51.3,0,0,1-10-26.108c-.14-1.545-.211-3.112-.211-4.689a51.976,51.976,0,0,1,2.535-15.979,17.938,17.938,0,0,0,14.865-7.935,18.126,18.126,0,0,0,1.8-16.818c8.444-7,18.832-10.877,29.365-9.851a40.929,40.929,0,0,1,18.607,7.194,20.564,20.564,0,0,1,3.16,2.734c3.371,3.511,14.222,12.656,26.921.822A40.752,40.752,0,0,1,124.508,7.4a38.621,38.621,0,0,1,13.425-4.114C148.47,2.263,158.873,6.144,167.3,13.14a18.118,18.118,0,0,0,1.8,16.817,17.93,17.93,0,0,0,14.865,7.932A51.973,51.973,0,0,1,186.5,53.883c0,1.577-.07,3.144-.21,4.689a51.307,51.307,0,0,1-10,26.108l-.958,1.242-9.314,12.045Zm21.148-60.377a18.073,18.073,0,0,1-16.769-18,18.98,18.98,0,0,1,.183-2.586A18.02,18.02,0,1,1,186.51,36.128C186.091,36.128,185.669,36.114,185.244,36.084ZM0,18.058A18.018,18.018,0,1,1,18.018,36.1,18.032,18.032,0,0,1,0,18.058Z" transform="translate(4921 1471.956)" fill="#e2e0de"/>
+                      <rect id="Retângulo_201" data-name="Retângulo 201" width="619" height="86" rx="43" transform="translate(4714 1495)" fill="#e2e0de" opacity="0.95"/>
+                    </g>
+                </svg>
+                <div class="mensagem remove_button">
+                    {% get_solo 'core.MensagemCoracao' as mensagem_do_coracao %}
+                    <p>{{ mensagem_do_coracao.message }}</p>
+                </div>
+            </div>
+            <div class="box_seta">
+                <a href="#sobre">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.199 41.281">
+                        <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M42.3,40.083,69.6,12.762a5.138,5.138,0,0,1,7.287,0,5.2,5.2,0,0,1,0,7.309L45.955,51.025a5.15,5.15,0,0,1-7.115.15L7.692,20.092a5.16,5.16,0,0,1,7.287-7.309Z" transform="translate(-6.188 -11.246)" fill="#8c0303"/>
+                    </svg>
+                </a>
+            </div>
+    </section>
 
 
-    <section id="sobre"></section>
-    <h2>-- Sobre Nós --</h2>
-    <h4>Sobre a Instituição</h4>
-    {% get_solo 'core.SobreInstituicao' as sobre_instituicao %}
-    <p>{{ sobre_instituicao.sobre }} </p>
-    <h4>Nossos Valores</h4>
-    {% for elemento in valores %}
-    <h5>{{ elemento.valor }}</h5>
-    <img src="{{ elemento.image.url }}" alt="Imagem do Valor">
-    <img src="{{ elemento.gif.url }}" alt="Gif do valor">
-    {% endfor %}
-    <h1>------FIM DA SEÇÃO------</h1>
+    <section id="sobre">
+        <h2>-- Sobre Nós --</h2>
+        <h4>Sobre a Instituição</h4>
+        {% get_solo 'core.SobreInstituicao' as sobre_instituicao %}
+        <p>{{ sobre_instituicao.sobre }} </p>
+        <h4>Nossos Valores</h4>
+        {% for elemento in valores %}
+        <h5>{{ elemento.valor }}</h5>
+        <img src="{{ elemento.image.url }}" alt="Imagem do Valor">
+        <img src="{{ elemento.gif.url }}" alt="Gif do valor">
+        {% endfor %}
+        <h1>------FIM DA SEÇÃO------</h1>
+    </section>
 
-    <section id="download"></section>
-    {% get_solo 'core.DownloadMateriais' as download_material %}
-    <H2>Download do material</H2>
 
-    <h3>{{download_material.name}}</h3>
+    <!-- <section id="download">
+        <h1>------INICIO DA SEÇÃO------</h1>
+        <div class="secao_material">
+           <svg id="background_material" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1920.786 1215.456">
+                <path id="União_6" data-name="União 6" d="M-8739.415,1024.85c-42-2.773-100.982-7.77-100.982-7.77S-9071,998.361-9106.886,995.619s-241.82-21.919-388.5-41.415c-23.469-3.121-43.943-6.189-61.738-9.147-1.562.417-.212-40.484-.163-40.558V-186h1920V877.284l.187-.005c.063-.029-.187,58.222-.127,58.481-2.843.758-5.628,1.415-8.684,2.051-35.962,7.461-115.6,15.36-198.2,26.448s-535.822,52.822-535.822,52.822-59.176,5.27-103.844,7.77-79.512,4.328-121.332,4.584q-3.561.022-7.2.022C-8652.64,1029.456-8699.8,1027.466-8739.415,1024.85Z" transform="translate(9557.88 186)" fill="#fff"/>
+            </svg>      
+        
+            {% get_solo 'core.DownloadMateriais' as download_material %}
+            <div class="material">       
+                <div id="titulo_section"> <h2>Conteúdo disponível</h2> </div> 
+                <div class="conteudo_section">
+                    <h3 id="conteudo_titulo">{{download_material.name}}</h3>
+                    <div id="conteudo_texto"> </p>{{download_material.texto |safe }}</p> </div>
+                        <img id="conteudo_imagem" src="{{ download_material.image.url }}" alt="Imagem do material">
+                        <img id="mascara_imagem_web" src="../static/image/mascara_web.png" alt="">
+                        <img id="mascara_imagem_mobile" src="../static/image/mascara_mobile.png" alt="">
+                </div>
+                
+                <div class="container_buttons">
+                    <button class="button" id="button_download">
+                        <a class="button_style" href="{{ download_material.arquivoParaDownload.url }}" download="{{ download_material.name }}">
+                            <p>Baixe o PDF sobre "Título"</p>
+                        </a>                    
+                    </button>
+                    <button class="button" id="button_link">
+                        <a class="button_style" href="{{ download_material.linkParaTeste }}">
+                            <p>Faça o teste para saber seu "Título"!</p>
+                        </a>
+                    </button>
+                </div>    
+                <div class="arrow_button">
+                    <a href="#contato">
+                        <svg id="arrow_down" xmlns="http://www.w3.org/2000/svg" width="72.199" height="41.281" viewBox="0 0 72.199 41.281">
+                            <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M42.3,40.083,69.6,12.762a5.138,5.138,0,0,1,7.287,0,5.2,5.2,0,0,1,0,7.309L45.955,51.025a5.15,5.15,0,0,1-7.115.15L7.692,20.092a5.16,5.16,0,0,1,7.287-7.309Z" transform="translate(-6.188 -11.246)" fill="#8c0303"/>
+                        </svg>
+                    </a>    
+                </div>
+            </div> 
+        </div>
 
-    <p>{{download_material.texto |safe }}</p>
-
-    <img src="{{ download_material.image.url }}" alt="Imagem do material">
-
-    <h4>{{ download_material.arquivo }}</h4>
-
-    <a href="{{ download_material.arquivoParaDownload.url }}" download="{{ download_material.name }}">
-        <p>{{ download_material.arquivoParaDownload.url }}</p>
-    </a>
-
-    <h2>Link para teste</h2>
-    <a href="{{ download_material.linkParaTeste }}">
-        <p>Link para o teste</p>
-    </a>
-
-    <h1>------FIM DA SEÇÃO------</h1>
+        <h1>------FIM DA SEÇÃO------</h1>
+    </section> -->
 
     <section id="contato">
+        <h1>------INICIO DA SEÇÃO------</h1>
         <form action="POST" id="contact-form" class="form_de_contato">
             {% csrf_token %}
             <label for="input-subject">Assunto:</label>
@@ -371,15 +419,60 @@
         <h1>------FIM DA SEÇÃO------</h1>
     </section>
 
+    <footer id="footer">
+        {% get_solo 'core.Footer' as footer %}
+        <!-- LOGO DA FÁBRICA DE SONHOS -->
+        <div class="box_logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 204.51 160.274">
+                <path id="União_2" data-name="União 2"
+                    d="M101.022,160.23A18.073,18.073,0,0,1,84.253,142.34a18.4,18.4,0,0,1,.183-2.586,18.008,18.008,0,0,1,35.835,2.586,17.393,17.393,0,0,1-.175,2.509,18.052,18.052,0,0,1-17.807,15.425C101.868,160.274,101.447,160.259,101.022,160.23ZM85.352,129.78,42.825,101.343l17.631-13.7h0l.02-.015c1.671,1.577,4.213,3.828,10.67,7.5l.016.039a62.781,62.781,0,0,0,29.454,8.288,61.737,61.737,0,0,0,23.751-4.082c11.846-4.523,17.54-9.844,19.569-11.763l19.65,15.379L119.7,129.78C100.259,110.294,85.352,129.78,85.352,129.78ZM164.1,96.461,147.627,83.477l8.075-10.44,1.46-1.887a28.309,28.309,0,0,0,6.042-16.23V53.883c0-15.559-9.988-25.219-25.524-25.219-5.1,0-13.232,4.156-20.422,10.976,0,0-11.221,10.052-25.682,2.692a28.069,28.069,0,0,1-5.817-4.047c-6.793-6.008-14.173-9.628-18.93-9.628-15.536,0-25.531,9.66-25.531,25.219,0,.332.021.685.021,1.037a28.306,28.306,0,0,0,6.039,16.229l1.46,1.888,8.075,10.44L40.329,96.316l-1.934,1.5-9.23-11.9-.958-1.242a51.3,51.3,0,0,1-10-26.108c-.14-1.545-.211-3.112-.211-4.689a51.976,51.976,0,0,1,2.535-15.979,17.938,17.938,0,0,0,14.865-7.935,18.126,18.126,0,0,0,1.8-16.818c8.444-7,18.832-10.877,29.365-9.851a40.929,40.929,0,0,1,18.607,7.194,20.564,20.564,0,0,1,3.16,2.734c3.371,3.511,14.222,12.656,26.921.822A40.752,40.752,0,0,1,124.508,7.4a38.621,38.621,0,0,1,13.425-4.114C148.47,2.263,158.873,6.144,167.3,13.14a18.118,18.118,0,0,0,1.8,16.817,17.93,17.93,0,0,0,14.865,7.932A51.973,51.973,0,0,1,186.5,53.883c0,1.577-.07,3.144-.21,4.689a51.307,51.307,0,0,1-10,26.108l-.958,1.242-9.314,12.045Zm21.148-60.377a18.073,18.073,0,0,1-16.769-18,18.98,18.98,0,0,1,.183-2.586A18.02,18.02,0,1,1,186.51,36.128C186.091,36.128,185.669,36.114,185.244,36.084ZM0,18.058A18.018,18.018,0,1,1,18.018,36.1,18.032,18.032,0,0,1,0,18.058Z"
+                    transform="translate(0 0)" fill="#e2e0de" />
+            </svg>
+        </div>
+
+        <!-- LOGO DO INSTAGRAM -->
+        <div class="box_logo_insta">
+            <a href="{{ footer.instagram }}">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.7 56.7"
+                    enable-background="new 0 0 56.7 56.7" xml:space="preserve" fill=#E2E0DE>
+                    <g>
+                        <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+                        c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z" />
+                        <circle cx="41.5" cy="16.4" r="2.9" />
+                        <path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+                        h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+                        s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+                        c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="box_telefone">
+            <?xml version="1.0" ?>
+            <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                enable-background="new 0 0 26 26" id="Слой_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                    d="M24.4970703,19.2363281c-0.4033203-0.6582031-1.0292969-1.4248047-1.7646484-2.1591797  c-0.5322266-0.5322266-2.359375-2.2675781-3.5341797-2.2675781c-0.3769531,0-0.6162109,0.1611328-0.75,0.2949219  l-1.5644531,1.5634766c-0.0263672,0.0263672-0.1103516,0.0566406-0.2617188,0.0566406  c-0.8681641,0-2.7089844-0.9609375-4.5478516-2.7988281c-2.4521484-2.453125-3.0419922-4.5097656-2.7421875-4.8095703  l1.5625-1.5634766c0.1347656-0.1347656,0.2958984-0.3740234,0.2958984-0.75  c0.0009766-1.1757813-1.7353516-3.0029297-2.2675781-3.5351563C8.3916016,2.7353516,6.5654297,1,5.3886719,1  c-0.3759766,0-0.6152344,0.1601563-0.75,0.2949219L1.5107422,4.4228516  C0.5869141,5.3457031,0.9238281,7.1513672,2.5126953,9.7890625C3.8916016,12.078125,6.0742188,14.7617188,8.65625,17.34375  C13.2363281,21.9238281,17.8740234,25.0009766,20.1962891,25c0.578125,0,1.0419922-0.171875,1.3808594-0.5107422  l3.1279297-3.1279297C25.3818359,20.6845703,24.7158203,19.5947266,24.4970703,19.2363281z M20.5166016,23.4287109  C20.4814453,23.4628906,20.3798828,23.5,20.1962891,23.5c-1.5810547,0-5.7910156-2.5292969-10.4794922-7.2167969  c-2.4990234-2.4990234-4.6005859-5.0800781-5.9189453-7.2685547C2.3125,6.5498047,2.4521484,5.6025391,2.5712891,5.4833984  L5.515625,2.5390625C5.8994141,2.6875,6.7890625,3.2539063,7.8623047,4.328125s1.640625,1.9628906,1.7890625,2.3466797  L8.2714844,8.0556641c-1.4384766,1.4384766,0.4130859,4.6005859,2.7421875,6.9306641  c1.9980469,1.9980469,4.1474609,3.2382813,5.6083984,3.2382813c0.6826172,0,1.0957031-0.2695313,1.3222656-0.4960938  l1.3808594-1.3798828c0.3837891,0.1484375,1.2724609,0.7158203,2.3466797,1.7890625  c1.0732422,1.0732422,1.640625,1.9628906,1.7890625,2.3466797L20.5166016,23.4287109z"
+                    fill=#E2E0DE />
+            </svg>
+        </div>
+        <div class="numero">
+            <p>Telefone: {{ footer.telefone }}</p>
+        </div>
+    </footer>
+
     <!-- Importação do script do Javascript para que o JQuery funcione -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-        </script>
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static 'Javascript/main.js' %}"></script>
     <script type="text/javascript" src="{% static 'Javascript/navbar.js' %}"></script>
-
-    <footer id="footer"></footer>
-
+    <script type="text/javascript" src="{% static 'Javascript/galeriaImagens.js' %}"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/Javascript" src="{% static 'slick/slick/slick.min.js' %}"></script>
 </body>
 
 </html>
