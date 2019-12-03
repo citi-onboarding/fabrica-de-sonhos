@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import SobreInstituicao, Valores, ImagensGaleria, MensagemCoracao, DownloadMateriais
+from .models import SobreInstituicao, Valores, ImagensGaleria, MensagemCoracao, DownloadMateriais, Footer
 from django.http import HttpResponse
 from django.core.mail import EmailMessage
 
@@ -22,7 +22,10 @@ class HomeView (generic.TemplateView):
         context["downloadMateriais"] = DownloadMateriais.objects.all()
         return context
 
+        # Footer
+        context["footer"] = Footer.objects.all()
 
+# Contato
 def index(request):
     return render(request, 'home.html')
 
@@ -30,12 +33,13 @@ def index(request):
 def email(request):
     nome = request.POST.get('name')
     email = request.POST.get('email')
+    telefone = request.POST.get('telephone')
     assunto = request.POST.get('subject')
     mensagem = request.POST.get('message')
 
 
     subject = assunto
-    body = f'Nome: {nome}\nAssunto: {assunto}\nEmail: {email}\nMensagem: {mensagem}'
+    body = f'Nome: {nome}\nAssunto: {assunto}\nEmail: {email}\nTelefone: {telefone}\nMensagem: {mensagem}'
 
     mail  = EmailMessage(subject, body, 'desafioPTAdjangoCITi2019.2@gmail.com', ['desafioPTAdjangoCITi2019.2@gmail.com', 'rmr@cin.ufpe.br'])
     result = mail.send()

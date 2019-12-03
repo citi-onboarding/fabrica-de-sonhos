@@ -1,7 +1,8 @@
 $('#contact-form').submit(function(e) {
     e.preventDefault()
     const name = $('input[name=name]').val()
-    const email = $('input[name=mail]').val()
+    const email = $('input[name=email]').val()
+    const telephone = $('input[name=telephone]').val()
     const subject = $('input[name=subject]').val()
     const message = $('input[name=message]').val()
 
@@ -14,6 +15,7 @@ $('#contact-form').submit(function(e) {
             'csrfmiddlewaretoken': token,
             'name': name,
             'email': email,
+            'telephone' : telephone,
             'subject': subject,
             'message': message
         },

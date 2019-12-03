@@ -1,0 +1,286 @@
+body {
+    margin: 0%;
+}
+
+#header_navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    z-index: 5;
+    position: fixed;
+}
+
+#navBar {
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    border-top: 10px solid #e8e0d8;
+    z-index: 5;
+}
+
+#navbar_svg {
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+}
+
+#fix_navbar {
+    position: fixed;
+    width: 100vw;
+    height: 20px;
+    background-color: #e8e0d8;
+    z-index: 5;
+}
+
+#secoes_box {
+    position: fixed;
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4%;
+    margin-left: 55%;
+    z-index: 5;
+}
+
+.secoes {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Muli', sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #8C0303;
+    text-decoration: none;
+    z-index: 5;
+}
+
+#box_logo_fabrica {
+    position: fixed;
+    width: 18%;
+    margin-top: 2.5%;
+    margin-left: 7%;
+    z-index: 5;
+}
+
+#logo_fabrica {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+.remove_button {
+    display: none;
+}
+
+
+/* Quando a tela tiver menos de 1200px, o css que irá rodar será o seguinte: */
+@media (max-width: 1200px) {
+    body {
+        margin: 0%;
+    }
+    #header_navbar {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        z-index: 5;
+        position: fixed;
+    }
+    #navBar {
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        border-top: 10px solid #e8e0d8;
+        z-index: 5;
+    }
+    #navbar_svg {
+        width: 100%;
+        position: absolute;
+        z-index: 5;
+    }
+    #fix_navbar {
+        position: fixed;
+        width: 100vw;
+        height: 20px;
+        background-color: #e8e0d8;
+        z-index: 5;
+    }
+    #secoes_box {
+        position: fixed;
+        width: 45%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 3.5%;
+        margin-left: 55%;
+        z-index: 5;
+    }
+    .secoes {
+        position: relative;
+        height: fit-content;
+        width: fit-content;
+        font-family: 'Muli', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: #8C0303;
+        text-decoration: none;
+        z-index: 5;
+    }
+    #box_logo_fabrica {
+        position: fixed;
+        width: 18%;
+        margin-top: 2.5%;
+        margin-left: 7%;
+        z-index: 5;
+    }
+    #logo_fabrica {
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+    }
+    .remove_button {
+        display: none;
+        z-index: 5;
+    }
+    .box_menu_hamburguer {
+        margin-top: 0%;
+        z-index: 5;
+    }
+}
+
+
+/* Quando a tela tiver menos de 1024px, o css que irá rodar será o seguinte: */
+@media (max-width: 1024px) {
+    body {
+        margin: 0%;
+    }
+    #header_navbar {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        z-index: 5;
+        position: fixed;
+    }
+    #navBar {
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        border-top: 10px solid #e8e0d8;
+        z-index: 5;
+    }
+    #navbar_svg {
+        width: 100%;
+        position: absolute;
+        z-index: 5;
+    }
+    #fix_navbar {
+        position: fixed;
+        width: 100vw;
+        height: 20px;
+        background-color: #e8e0d8;
+        z-index: 5;
+    }
+    #secoes_box {
+        display: none;
+        position: fixed;
+        width: 45%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 3.5%;
+        margin-left: 55%;
+        z-index: 5;
+    }
+    .secoes {
+        display: none;
+        position: relative;
+        height: fit-content;
+        width: fit-content;
+        font-family: 'Muli', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: #8C0303;
+        text-decoration: none;
+        z-index: 5;
+    }
+    #box_logo_fabrica {
+        position: fixed;
+        width: 18%;
+        margin-top: 2.5%;
+        margin-left: 7%;
+        z-index: 5;
+    }
+    #logo_fabrica {
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+    }
+    .box_menu_hamburguer {
+        position: fixed;
+        margin-left: 75%;
+        margin-top: 2.5%;
+        width: 7.5%;
+        border: transparent;
+        background: transparent;
+        z-index: 5;
+    }
+    #menu_hamburguer {
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+    }
+    .box_botao_sair {
+        position: fixed;
+        margin-left: 75%;
+        margin-top: 3%;
+        width: 7.5%;
+        border: transparent;
+        background: transparent;
+        z-index: 5;
+    }
+    #botao_sair {
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+    }
+    .remove_button {
+        display: none;
+    }
+    .action_menu_hamburguer {
+        height: 100vh;
+        width: 100vw;
+        background-color: #e8e0d8;
+        position: fixed;
+        z-index: 5;
+    }
+    .secoes_box_mobile {
+        margin-top: 15%;
+        height: 80vh;
+        width: 100vw;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 5;
+    }
+    .secoes_mobile {
+        position: relative;
+        height: fit-content;
+        width: fit-content;
+        font-family: 'Muli', sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        color: #8C0303;
+        text-decoration: none;
+        z-index: 5;
+    }
+    #box_logo_fabrica_mobile {
+        width: 35%;
+        margin-top: 2.5%;
+        margin-left: 7%;
+        z-index: 5;
+    }
+}
