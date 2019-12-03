@@ -2,15 +2,8 @@
     width: 100vw;
     height: auto;
     position: absolute;
-    display: none
 }
-#fix_material{
-    width: 100vw;
-    height: 50px;
-    position: absolute;
-    background: #8C0303;
-    display: none;
-}
+
 
 .material{
     position: relative;
