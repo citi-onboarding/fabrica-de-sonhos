@@ -1,0 +1,146 @@
+
+#container_sobre{
+    position: relative;
+}
+#background-sobre{
+    position: absolute;
+    width: auto;
+}
+
+#sobre{
+    width: 100%;
+}
+.titulo_texto{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+#titulo_sobre{
+    text-align: center;
+    font-family: "Bold", "Muli";
+    font-size: 25px;
+    color: #8C0303;
+    position: relative;
+    top: 20px;
+    order: 0;
+}
+.texto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    order: 1;
+}
+#texto_sobre{
+    font-family: "Light", "Muli";
+    font-size: 15px;
+    text-align: left;
+    width: 50%;
+    height: auto;
+}
+
+
+
+/* Valores */
+
+.container_valores{
+    padding: 10px;
+}
+
+#valores{
+    display: flex;
+    justify-content: center;
+}
+
+.valor{
+    width: 100px;
+    height: 100px;
+}
+.image_valor{
+    position: relative; 
+    display: block;
+    z-index: 1;
+}
+.gif_valor{
+    position: absolute;
+    display: block;
+    z-index: 1;
+}
+#valor_texto{
+    width: 125px;
+    font-family: "ExtraBold", "Muli";
+    font-size: 15px;
+    color: #8C0303;
+}
+
+#arrow_down_sobre{
+    position: relative;
+    margin-top: 10%;
+    padding-left: 50%;
+}
+.image_valor:hover{ 
+    z-index: 0;
+}
+
+@media(max-width: 1024px){
+
+    #arrow_down_sobre{
+        align-content: flex-end;
+    }
+}
+@media(max-width: 900px){
+    #valores{
+        flex-wrap: wrap;
+        align-items: initial;
+    }
+    
+    #texto_sobre{
+        width: 80%;
+        height: 300px;
+        overflow: auto;
+        align-items: center;
+    }
+    #texto_sobre::-webkit-scrollbar { 
+        width:10px; 
+        border-radius:10px; 
+        background: #FFFFFF; 
+        border: 1px solid #8C0303; }
+    #texto_sobre::-webkit-scrollbar-thumb { 
+        border-radius:10px; 
+        background:#8c0303;  
+    }
+
+}
+@media(max-width: 455px){
+    .container_valores{
+        width: 100px;
+        height: 150px;
+    }
+    #valor_texto{
+        font-size: 13px;
+        width: 100px;
+    }
+    
+}
+@media(max-width: 380px){
+    .container_valores{
+        width: 85px;
+        height: 170px;
+        padding-left: 15px;
+    }
+    #valor_texto{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 350px){
+    .container_valores{
+        width: 70px;
+        height: 150px;
+        padding-left: 21px;
+    }
+    #valor_texto{
+        font-size: 11px;
+    }
+}
