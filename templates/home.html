@@ -29,29 +29,36 @@
 
 
     <section id="sobre">
-
-        <div class="titulo_texto">
-        <h2 id="titulo_sobre"> Sobre Nós </h2>
-        {% get_solo 'core.SobreInstituicao' as sobre_instituicao %}
-        <div class="texto"><p id="texto_sobre">{{ sobre_instituicao.sobre }} </p></div>
-        </div>  
+        <svg id="background-sobre" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1921.896 1111.882">
+            <path id="União_8" data-name="União 8" d="M-8730.416,953.969c-42-3.2-119.944-26.906-119.944-26.906s-96.637-31.375-256.709-45.393c-150.472-13.176-305.032-7.977-450.26,28.321-1.255-1.071-.479-40.7.039-68.658V-55.517h-.168c.333-.168,0-45.167,0-45.167,16.865-7.934,33.517-14.152,42.725-16.817,30.586-8.857,95.147-18.509,116.911-21.275s72.762-9.148,94.525-10.21,91.419-3.618,116.914-3.618,82.089,1.914,101.989,3.618,95.145,10,106.341,11.914,77.734,14.466,89.55,17.444,49.752,14.042,67.786,18.509,28.606,10,48.506,14.253,37.935,9.148,69.028,12.763,52.237,5.746,71.517,6.17,64.677.214,78.979-1.49,65.3-9.572,72.759-11.911,55.966-16.17,67.786-19.785,48.5-15.318,64.674-18.3,69.028-14.255,88.929-17.021,86.44-10.849,107.586-12.125,83.953-3.615,100.12-3.829,105.1,1.914,119.4,3.4,75.247,7.447,86.441,9.361,56.592,8.082,71.516,11.062,81.467,16.381,95.147,20.634c4.692,1.459,21.378,8.1,41.42,16.246.156-.156.394,8.956.568,18.067.178,9.083.288,18.166.194,18.072-.376,0-.768,0-1.146,0V818.494l.52.471c-.258-.153-.225,22.77-.228,45.693,0,23.252-.041,46.5-.458,45.676-109.522-27.726-239.134-43.118-351.18-28.662-179.561,23.17-382.3,63.343-382.3,63.343s-59.175,6.074-103.844,8.956-79.512,4.985-121.332,5.283q-3.551.025-7.179.025C-8643.624,959.277-8690.8,956.984-8730.416,953.969Zm1093.645-135.005,0,0Z" transform="translate(9558.007 152.605)" fill="#e6dfd8"/>
+        </svg>
         
-        <section id="valores">
-            {% for elemento in valores %}
-            <div class="container_valores">
-                <div class="container_image_gif">
-                    <img class="valor gif_valor" src="{{ elemento.gif.url }}" alt="Gif do valor">
-                    <img class="valor image_valor" src="{{ elemento.image.url }}" alt="Imagem do Valor">
+        <div id="container_sobre">
+            <div class="titulo_texto">
+                <h2 id="titulo_sobre"> Sobre Nós </h2>
+                {% get_solo 'core.SobreInstituicao' as sobre_instituicao %}
+                <div class="texto"><p id="texto_sobre">{{ sobre_instituicao.sobre }} </p></div>
+            </div>  
+        
+            <section id="valores">
+                {% for elemento in valores %}
+                <div class="container_valores">
+                    <div class="container_image_gif">
+                        <img class="valor gif_valor" src="{{ elemento.gif.url }}" alt="Gif do valor">
+                        <img class="valor image_valor" src="{{ elemento.image.url }}" alt="Imagem do Valor">
+                    </div>
+                    <h5 id="valor_texto">{{ elemento.valor }}</h5>
                 </div>
-                <h5 id="valor_texto">{{ elemento.valor }}</h5>
-            </div>
-            {% endfor %}
+                {% endfor %}
             
-        </section>
-        <a class="arrow_down_sobre" href="#download"></a>
-        <svg id="arrow_down_sobre" xmlns="http://www.w3.org/2000/svg" width="72.199" height="41.281" viewBox="0 0 72.199 41.281">
-            <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M42.3,40.083,69.6,12.762a5.138,5.138,0,0,1,7.287,0,5.2,5.2,0,0,1,0,7.309L45.955,51.025a5.15,5.15,0,0,1-7.115.15L7.692,20.092a5.16,5.16,0,0,1,7.287-7.309Z" transform="translate(-6.188 -11.246)" fill="#8c0303"/>
-        </svg>  
+            </section>
+        </div>
+        
+        <a class="arrow_down_sobre" href="#download">
+            <svg id="arrow_down_sobre" xmlns="http://www.w3.org/2000/svg" width="72.199" height="41.281" viewBox="0 0 72.199 41.281">
+                <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M42.3,40.083,69.6,12.762a5.138,5.138,0,0,1,7.287,0,5.2,5.2,0,0,1,0,7.309L45.955,51.025a5.15,5.15,0,0,1-7.115.15L7.692,20.092a5.16,5.16,0,0,1,7.287-7.309Z" transform="translate(-6.188 -11.246)" fill="#8c0303"/>
+            </svg>  
+        </a>
           
     </section>
 

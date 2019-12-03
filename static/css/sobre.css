@@ -1,12 +1,17 @@
 
+#container_sobre{
+    position: relative;
+}
+#background-sobre{
+    position: absolute;
+    width: auto;
+}
+
 #sobre{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
-    height: 100%;
 }
 .titulo_texto{
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -45,9 +50,7 @@
 
 #valores{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 60%;
+    justify-content: center;
 }
 
 .valor{
@@ -57,34 +60,88 @@
 .image_valor{
     position: relative; 
     display: block;
+    z-index: 1;
 }
 .gif_valor{
     position: absolute;
     display: block;
+    z-index: 1;
 }
 #valor_texto{
     width: 125px;
     font-family: "ExtraBold", "Muli";
     font-size: 15px;
     color: #8C0303;
-
 }
 
 #arrow_down_sobre{
     position: relative;
-    display: flex;
-    align-items: center;
-    margin-top: 15%;
+    margin-top: 10%;
+    padding-left: 50%;
+}
+.image_valor:hover{ 
+    z-index: 0;
 }
 
-
 @media(max-width: 1024px){
+
+    #arrow_down_sobre{
+        align-content: flex-end;
+    }
+}
+@media(max-width: 900px){
     #valores{
         flex-wrap: wrap;
         align-items: initial;
     }
-    #arrow_down_sobre{
-        align-items: flex-end;
+    
+    #texto_sobre{
+        width: 80%;
+        height: 300px;
+        overflow: auto;
+        align-items: center;
+    }
+    #texto_sobre::-webkit-scrollbar { 
+        width:10px; 
+        border-radius:10px; 
+        background: #FFFFFF; 
+        border: 1px solid #8C0303; }
+    #texto_sobre::-webkit-scrollbar-thumb { 
+        border-radius:10px; 
+        background:#8c0303;  
+    }
+
+}
+@media(max-width: 455px){
+    .container_valores{
+        width: 100px;
+        height: 150px;
+    }
+    #valor_texto{
+        font-size: 13px;
+        width: 100px;
+    }
+    
+}
+@media(max-width: 380px){
+    .container_valores{
+        width: 85px;
+        height: 170px;
+        padding-left: 15px;
+    }
+    #valor_texto{
+        font-size: 12px;
+        
     }
 }
 
+@media(max-width: 350px){
+    .container_valores{
+        width: 70px;
+        height: 150px;
+        padding-left: 21px;
+    }
+    #valor_texto{
+        font-size: 11px;
+    }
+}
