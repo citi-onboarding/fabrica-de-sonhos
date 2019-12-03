@@ -10,6 +10,7 @@ $(document).ready(function(){
 
 // CORAÇÃO
 const galeria = document.querySelector('#galeria');
+const box_coracao = galeria.querySelector('.coracao_box');
 const coracao_sem_mensagem = galeria.querySelector('#coracao_branco');
 const coracao_mensagem = galeria.querySelector('#coracao_mensagem');
 const mensagem = galeria.querySelector('.mensagem');
@@ -30,12 +31,22 @@ function addCoracaoComMensagem() {
     coracao_mensagem.classList.remove('remove_button');
 }
 
+function addMensagem() {
+    mensagem.classList.remove('remove_button');
+}
+
+function removeMensagem() {
+    mensagem.classList.add('remove_button');
+}
+
 coracao_sem_mensagem.addEventListener('click', () => {
     removeCoracaoSemMensagem();
     addCoracaoComMensagem();
+    addMensagem();
 })
 
 coracao_mensagem.addEventListener('click', () => {
     removeCoracaoComMensagem();
     addCoracaoSemMensagem();
+    removeMensagem();
 })
