@@ -8,6 +8,8 @@ body {
     display: flex;
     justify-content: flex-start;
     align-content: center;
+    z-index: 5;
+    position: fixed;
 }
 
 #navBar {
@@ -15,11 +17,13 @@ body {
     width: 100%;
     height: fit-content;
     border-top: 10px solid #e8e0d8;
+    z-index: 5;
 }
 
 #navbar_svg {
     width: 100%;
     position: absolute;
+    z-index: 5;
 }
 
 #fix_navbar {
@@ -27,6 +31,7 @@ body {
     width: 100vw;
     height: 20px;
     background-color: #e8e0d8;
+    z-index: 5;
 }
 
 #secoes_box {
@@ -36,6 +41,7 @@ body {
     justify-content: space-evenly;
     margin-top: 4%;
     margin-left: 55%;
+    z-index: 5;
 }
 
 .secoes {
@@ -47,6 +53,7 @@ body {
     font-weight: 600;
     color: #8C0303;
     text-decoration: none;
+    z-index: 5;
 }
 
 #box_logo_fabrica {
@@ -54,11 +61,13 @@ body {
     width: 18%;
     margin-top: 2.5%;
     margin-left: 7%;
+    z-index: 5;
 }
 
 #logo_fabrica {
     position: fixed;
     width: 100%;
+    z-index: 5;
 }
 .remove_button {
     display: none;
@@ -69,7 +78,6 @@ body {
 @media (max-width: 1200px) {
     body {
         margin: 0%;
-        background-color: grey;
     }
     #header_navbar {
         width: 100%;
@@ -77,22 +85,27 @@ body {
         display: flex;
         justify-content: flex-start;
         align-content: center;
+        z-index: 5;
+        position: fixed;
     }
     #navBar {
         position: fixed;
         width: 100%;
         height: fit-content;
         border-top: 10px solid #e8e0d8;
+        z-index: 5;
     }
     #navbar_svg {
         width: 100%;
         position: absolute;
+        z-index: 5;
     }
     #fix_navbar {
         position: fixed;
         width: 100vw;
         height: 20px;
         background-color: #e8e0d8;
+        z-index: 5;
     }
     #secoes_box {
         position: fixed;
@@ -101,6 +114,7 @@ body {
         justify-content: space-evenly;
         margin-top: 3.5%;
         margin-left: 55%;
+        z-index: 5;
     }
     .secoes {
         position: relative;
@@ -111,22 +125,27 @@ body {
         font-weight: 600;
         color: #8C0303;
         text-decoration: none;
+        z-index: 5;
     }
     #box_logo_fabrica {
         position: fixed;
         width: 18%;
         margin-top: 2.5%;
         margin-left: 7%;
+        z-index: 5;
     }
     #logo_fabrica {
         position: fixed;
         width: 100%;
+        z-index: 5;
     }
     .remove_button {
         display: none;
+        z-index: 5;
     }
     .box_menu_hamburguer {
         margin-top: 0%;
+        z-index: 5;
     }
 }
 
@@ -135,7 +154,6 @@ body {
 @media (max-width: 1024px) {
     body {
         margin: 0%;
-        background-color: grey;
     }
     #header_navbar {
         width: 100%;
@@ -143,22 +161,27 @@ body {
         display: flex;
         justify-content: flex-start;
         align-content: center;
+        z-index: 5;
+        position: fixed;
     }
     #navBar {
         position: fixed;
         width: 100%;
         height: fit-content;
         border-top: 10px solid #e8e0d8;
+        z-index: 5;
     }
     #navbar_svg {
         width: 100%;
         position: absolute;
+        z-index: 5;
     }
     #fix_navbar {
         position: fixed;
         width: 100vw;
         height: 20px;
         background-color: #e8e0d8;
+        z-index: 5;
     }
     #secoes_box {
         display: none;
@@ -168,6 +191,7 @@ body {
         justify-content: space-evenly;
         margin-top: 3.5%;
         margin-left: 55%;
+        z-index: 5;
     }
     .secoes {
         display: none;
@@ -179,16 +203,19 @@ body {
         font-weight: 600;
         color: #8C0303;
         text-decoration: none;
+        z-index: 5;
     }
     #box_logo_fabrica {
         position: fixed;
         width: 18%;
         margin-top: 2.5%;
         margin-left: 7%;
+        z-index: 5;
     }
     #logo_fabrica {
         position: fixed;
         width: 100%;
+        z-index: 5;
     }
     .box_menu_hamburguer {
         position: fixed;
@@ -197,10 +224,12 @@ body {
         width: 7.5%;
         border: transparent;
         background: transparent;
+        z-index: 5;
     }
     #menu_hamburguer {
         position: fixed;
         width: 100%;
+        z-index: 5;
     }
     .box_botao_sair {
         position: fixed;
@@ -209,10 +238,12 @@ body {
         width: 7.5%;
         border: transparent;
         background: transparent;
+        z-index: 5;
     }
     #botao_sair {
         position: fixed;
         width: 100%;
+        z-index: 5;
     }
     .remove_button {
         display: none;
@@ -222,6 +253,7 @@ body {
         width: 100vw;
         background-color: #e8e0d8;
         position: fixed;
+        z-index: 5;
     }
     .secoes_box_mobile {
         margin-top: 15%;
@@ -232,6 +264,7 @@ body {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        z-index: 5;
     }
     .secoes_mobile {
         position: relative;
@@ -242,10 +275,12 @@ body {
         font-weight: 600;
         color: #8C0303;
         text-decoration: none;
+        z-index: 5;
     }
     #box_logo_fabrica_mobile {
         width: 35%;
         margin-top: 2.5%;
         margin-left: 7%;
+        z-index: 5;
     }
 }
