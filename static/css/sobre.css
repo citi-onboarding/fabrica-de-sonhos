@@ -4,14 +4,25 @@
 }
 #background-sobre{
     position: absolute;
-    width: auto;
+    width: 100%;
+    height: 110%;
+}
+#background-sobre_web{
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+#background-sobre_mobile{
+    display: none;
 }
 
 #sobre{
     width: 100%;
+    margin-top: -10%;
 }
 .titulo_texto{
-    margin-top: 10%;
+    padding-top: 10%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -46,6 +57,9 @@
 
 .container_valores{
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #valores{
@@ -57,39 +71,65 @@
     width: 100px;
     height: 100px;
 }
+
 .image_valor{
     position: relative; 
     display: block;
-    z-index: 1;
+    
 }
 .gif_valor{
     position: absolute;
     display: block;
-    z-index: 1;
+   
 }
 #valor_texto{
     width: 125px;
     font-family: "ExtraBold", "Muli";
     font-size: 15px;
     color: #8C0303;
+    text-align: center;
 }
 
-#arrow_down_sobre{
+.arrow_down_sobre{
+    width: 100%;
     position: relative;
-    margin-top: 10%;
-    padding-left: 50%;
+    display: flex;
+    justify-content: center;
 }
-.image_valor:hover{ 
-    z-index: 0;
+.gif_valor:hover{
+    display: block;
+    
 }
 
 @media(max-width: 1024px){
-
-    #arrow_down_sobre{
-        align-content: flex-end;
+    #background-sobre_web{
+        display: none;
     }
+    #background-sobre_mobile{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .arrow_down_sobre{
+        justify-content: flex-end;
+    }
+    #arrow_down_sobre{
+        width: 50px;
+    }
+    #arrow_button{
+        padding-right: 50px;
+    }
+
 }
 @media(max-width: 900px){
+    #background-sobre{
+        height: 100%;
+    }
+    .arrow_down_sobre{
+     
+        justify-content: flex-end;
+    }
+
     #valores{
         flex-wrap: wrap;
         align-items: initial;
@@ -110,6 +150,11 @@
         border-radius:10px; 
         background:#8c0303;  
     }
+}
+@media(max-width:870px){
+    #background-sobre{
+        height: 120%;
+    }
 
 }
 @media(max-width: 455px){
@@ -121,6 +166,16 @@
         font-size: 13px;
         width: 100px;
     }
+    #background-sobre{
+        z-index: 1;
+    }
+    #container_sobre{
+        z-index: 1;
+    }
+    .arrow_down_sobre{
+        z-index: 1;
+    }
+    
     
 }
 @media(max-width: 380px){
@@ -136,11 +191,17 @@
 
 @media(max-width: 350px){
     .container_valores{
+        width: auto;
+        height: auto;
+        
+    }
+    .container_image_gif img{
         width: 70px;
-        height: 150px;
-        padding-left: 21px;
+        height: 70px;
     }
     #valor_texto{
         font-size: 11px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }
