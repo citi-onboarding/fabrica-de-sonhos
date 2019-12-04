@@ -2,7 +2,7 @@ const header_navBar = document.querySelector('#header_navbar');
 const button_menu_hamburguer = header_navBar.querySelector('.box_menu_hamburguer');
 const action_div = header_navBar.querySelector('.action_menu_hamburguer');
 const button_icon_exit = action_div.querySelector('.box_botao_sair');
-const logo_mobile = action_div.querySelector('.logo_fabrica_mobile');
+const logo_mobile = action_div.querySelector('#logo_fabrica_mobile');
 const secoes_mobile = action_div.querySelector('.secoes_box_mobile');
 
 function menuHamburguerRemove() {
@@ -53,6 +53,11 @@ button_icon_exit.addEventListener('click', () => {
 })
 
 secoes_mobile.addEventListener('click', () => {
+    changeMenuScreenRemove();
+    menuHamburguerAdd();
+})
+
+logo_mobile.addEventListener('click', () => {
     changeMenuScreenRemove();
     menuHamburguerAdd();
 })
