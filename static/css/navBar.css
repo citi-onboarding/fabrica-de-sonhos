@@ -195,9 +195,9 @@ body {
     }
     .box_menu_hamburguer {
         position: fixed;
-        margin-left: 75%;
-        margin-top: 2.5%;
-        width: 7.5%;
+        right: 50px;
+        margin-top: 3%;
+        width: 50px;
         border: transparent;
         background: transparent;
         z-index: 5;
@@ -258,5 +258,18 @@ body {
         margin-top: 2.5%;
         margin-left: 7%;
         z-index: 5;
+    }
+}
+
+@media (max-width: 750px) {
+    #navBar {
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        border-top: 30px solid #e8e0d8;
+        z-index: 5;
+    }
+    #fix_navbar {
+        height: 50px;
     }
 }
