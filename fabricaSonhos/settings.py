@@ -137,7 +137,7 @@ EMAIL_HOST_PASSWORD = 'queromuitopassarnociti'
 EMAIL_PORT = 587
 
 DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
-DROPBOX_ACCESS_TOKEN = 'op_fyJe7oZAAAAAAAAAAFBuzZw2undXkKlahAhHuL0a56B0GG7ZwdGyPTNqnb5vq'
+DROPBOX_ACCESS_TOKEN = 'op_fyJe7oZAAAAAAAAAAFQoMT95yHFzwhJ_-nlHywlEe55T5bWPgzic5ZKi3f2CG'
 DROPBOX_CONSUMER_KEY = 't7vkwc4q5krchra'
 DROPBOX_CONSUMER_SECRET = 'i4fhwwwv55j60cp'
-DROPBOX_ROOT_FOLDER = '/fabricaDeSonhos'
+DROPBOX_ROOT_FOLDER = 'fabricaDeSonhos'
