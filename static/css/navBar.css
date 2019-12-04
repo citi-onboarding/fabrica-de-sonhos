@@ -57,7 +57,14 @@ body {
 #logo_fabrica {
     position: fixed;
     z-index: 5;
-    width: 18%;
+    width: 300px;
+    margin-top: 1%;
+    margin-left: 5%;
+}
+#logo_fabrica_mobile {
+    position: fixed;
+    z-index: 5;
+    width: 300px;
     margin-top: 1%;
     margin-left: 5%;
 }
@@ -189,15 +196,15 @@ body {
     }
     #logo_fabrica {
         position: fixed;
-        width: 18%;
+        width: 200px;
         z-index: 5;
         margin-top: 2%;
     }
     .box_menu_hamburguer {
         position: fixed;
         right: 50px;
-        margin-top: 3%;
-        width: 50px;
+        margin-top: 15px;
+        width: 70px;
         border: transparent;
         background: transparent;
         z-index: 5;
@@ -209,9 +216,9 @@ body {
     }
     .box_botao_sair {
         position: fixed;
-        margin-left: 75%;
-        margin-top: 3%;
-        width: 7.5%;
+        right: 50px;
+        margin-top: 15px;
+        width: 70px;
         border: transparent;
         background: transparent;
         z-index: 5;
@@ -253,15 +260,15 @@ body {
         text-decoration: none;
         z-index: 5;
     }
-    #box_logo_fabrica_mobile {
-        width: 35%;
-        margin-top: 2.5%;
-        margin-left: 7%;
+    #logo_fabrica_mobile {
+        position: fixed;
+        width: 200px;
         z-index: 5;
+        margin-top: 2%;
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 770px) {
     #navBar {
         position: fixed;
         width: 100%;
@@ -271,5 +278,44 @@ body {
     }
     #fix_navbar {
         height: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    #navBar {
+        border-top: 50px solid #e8e0d8;
+    }
+    #fix_navbar {
+        height: 75px;
+    }
+    #logo_fabrica {
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+    #logo_fabrica_mobile {
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+    .box_menu_hamburguer {
+        right: 30px;
+        width: 60px;
+    }
+    .box_botao_sair {
+        right: 30px;
+        width: 60px;
+    }
+}
+
+@media (max-width: 320px) {
+    #logo_fabrica {
+        margin-top: 6px;
+        margin-left: 30px;
+    }
+    #logo_fabrica_mobile {
+        position: fixed;
+        width: 200px;
+        z-index: 5;
+        margin-top: 6px;
+        margin-left: 30px;
     }
 }
