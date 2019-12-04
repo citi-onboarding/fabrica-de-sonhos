@@ -47,6 +47,9 @@
 
 .container_valores{
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #valores{
@@ -74,6 +77,7 @@
     font-family: "ExtraBold", "Muli";
     font-size: 15px;
     color: #8C0303;
+    text-align: center;
 }
 
 .arrow_down_sobre{
@@ -147,11 +151,17 @@
 
 @media(max-width: 350px){
     .container_valores{
-        width: 50px;
-        height: 150px;
-        padding-left: 21px;
+        width: auto;
+        height: auto;
+        
+    }
+    .container_image_gif img{
+        width: 70px;
+        height: 70px;
     }
     #valor_texto{
         font-size: 11px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }
