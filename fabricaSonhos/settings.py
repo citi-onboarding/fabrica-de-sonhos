@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import io
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -138,8 +137,7 @@ EMAIL_HOST_PASSWORD = 'queromuitopassarnociti'
 EMAIL_PORT = 587
 
 DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
-DROPBOX_ACCESS_TOKEN = 'op_fyJe7oZAAAAAAAAAAD3bP2K8t5DSFUqffRySwrRAJIacowQ5Vn2fKfx3mOH0p'
-DROPBOX_CONSUMER_KEY = 'lsbthzloht2pumh'
-DROPBOX_CONSUMER_SECRET = '065qfhyctkngalo'
-DROPBOX_ROOT_FOLDER = '/Public'
-
+DROPBOX_ACCESS_TOKEN = 'op_fyJe7oZAAAAAAAAAAFBuzZw2undXkKlahAhHuL0a56B0GG7ZwdGyPTNqnb5vq'
+DROPBOX_CONSUMER_KEY = 't7vkwc4q5krchra'
+DROPBOX_CONSUMER_SECRET = 'i4fhwwwv55j60cp'
+DROPBOX_ROOT_FOLDER = '/fabricaDeSonhos'
