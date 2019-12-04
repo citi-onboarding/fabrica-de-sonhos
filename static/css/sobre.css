@@ -9,9 +9,10 @@
 
 #sobre{
     width: 100%;
+    margin-top: -10%;
 }
 .titulo_texto{
-    margin-top: 10%;
+    padding-top: 10%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -57,15 +58,16 @@
     width: 100px;
     height: 100px;
 }
+
 .image_valor{
     position: relative; 
     display: block;
-    z-index: 1;
+    
 }
 .gif_valor{
     position: absolute;
     display: block;
-    z-index: 1;
+   
 }
 #valor_texto{
     width: 125px;
@@ -74,22 +76,31 @@
     color: #8C0303;
 }
 
-#arrow_down_sobre{
+.arrow_down_sobre{
+    width: 100%;
     position: relative;
-    margin-top: 10%;
-    padding-left: 50%;
+    display: flex;
+    justify-content: center;
 }
-.image_valor:hover{ 
-    z-index: 0;
+.gif_valor:hover{
+    display: block;
+    
 }
 
 @media(max-width: 1024px){
-
-    #arrow_down_sobre{
-        align-content: flex-end;
+    .arrow_down_sobre{
+        justify-content: flex-end;
     }
 }
 @media(max-width: 900px){
+    .arrow_down_sobre{
+     
+        justify-content: flex-end;
+    }
+    #arrow_down_sobre{
+        width: 50px;
+        
+    }
     #valores{
         flex-wrap: wrap;
         align-items: initial;
@@ -136,7 +147,7 @@
 
 @media(max-width: 350px){
     .container_valores{
-        width: 70px;
+        width: 50px;
         height: 150px;
         padding-left: 21px;
     }
