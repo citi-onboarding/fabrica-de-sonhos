@@ -41,6 +41,6 @@ def email(request):
     subject = assunto
     body = f'Nome: {nome}\nAssunto: {assunto}\nEmail: {email}\nTelefone: {telefone}\nMensagem: {mensagem}'
 
-    mail  = EmailMessage(subject, body, 'desafioPTAdjangoCITi2019.2@gmail.com', ['desafioPTAdjangoCITi2019.2@gmail.com', 'rmr@cin.ufpe.br'])
+    mail  = EmailMessage(subject, body, 'dreamFactoryRecife@gmail.com', ['desafioPTAdjangoCITi2019.2@gmail.com' ])
     result = mail.send()
     return HttpResponse(status=201)
