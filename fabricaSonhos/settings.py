@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'solo',
-    'ckeditor'
+    'ckeditor',
+    'django_dropbox_storage',
 ]
 
 MIDDLEWARE = [
