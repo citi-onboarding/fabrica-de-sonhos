@@ -182,7 +182,6 @@
                     </g>
                   </svg>
         </div>
-       
 
         <div id="container_sobre">
             <div class="titulo_texto">
@@ -249,12 +248,12 @@
                     <button class="button" id="button_download">
                         <a class="button_style" href="{{ download_material.arquivoParaDownload.url }}"
                             download="{{ download_material.name }}">
-                            <p>Baixe o PDF sobre "Título"</p>
+                            <p>Baixe o PDF sobre {{download_material.name}}</p>
                         </a>
                     </button>
                     <button class="button" id="button_link">
                         <a class="button_style" href="{{ download_material.linkParaTeste }}">
-                            <p>Faça o teste para saber seu "Título"!</p>
+                            <p>Faça o teste sobre {{download_material.name}}</p>
                         </a>
                     </button>
                 </div>
