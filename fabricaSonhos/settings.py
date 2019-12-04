@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import io
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'solo',
-    'ckeditor'
+    'ckeditor',
+    'django_dropbox_storage',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +133,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'dreamFactoryRecife@gmail.com'
-EMAIL_HOST_PASSWORD = 'CITi-pta2019.2'
+EMAIL_HOST_USER = 'desafioPTAdjangoCITi2019.2@gmail.com'
+EMAIL_HOST_PASSWORD = 'queromuitopassarnociti'
 EMAIL_PORT = 587
+
+DEFAULT_FILE_STORAGE = 'django_dropbox_storage.storage.DropboxStorage'
+DROPBOX_ACCESS_TOKEN = 'op_fyJe7oZAAAAAAAAAAD3bP2K8t5DSFUqffRySwrRAJIacowQ5Vn2fKfx3mOH0p'
+DROPBOX_CONSUMER_KEY = 'lsbthzloht2pumh'
+DROPBOX_CONSUMER_SECRET = '065qfhyctkngalo'
+DROPBOX_ROOT_FOLDER = '/Public'
+

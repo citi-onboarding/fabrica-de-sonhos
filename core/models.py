@@ -1,8 +1,11 @@
 from django.db import models
 from solo.models import SingletonModel
 from ckeditor.fields import RichTextField
+from django_dropbox_storage.storage import DropboxStorage
 
 # Create your models here.
+
+DROPBOX_STORAGE = DropboxStorage()
 
 
 # Seção 'Sobre nós'
@@ -17,8 +20,8 @@ class SobreInstituicao(SingletonModel):
 
 class Valores(models.Model):
     valor = models.CharField('Valor', max_length=100)
-    image = models.ImageField(upload_to='imagemValores/', verbose_name='Imagem do valor', null=True)
-    gif = models.ImageField(upload_to='gifValores/', verbose_name='Gif do valor', null=True)
+    image = models.ImageField(upload_to='imagemValores/', verbose_name='Imagem do valor', null=True, storage=DROPBOX_STORAGE)
+    gif = models.ImageField(upload_to='gifValores/', verbose_name='Gif do valor', null=True, storage=DROPBOX_STORAGE)
 
     class Meta:
         verbose_name = 'Valor'
@@ -30,7 +33,7 @@ class Valores(models.Model):
 
 # Seção 'Galeria de eventos'
 class ImagensGaleria(models.Model):
-    image = models.ImageField(upload_to='imagensGaleria/', verbose_name='Imagem do evento', null=True)
+    image = models.ImageField(upload_to='imagensGaleria/', verbose_name='Imagem do evento', null=True, storage=DROPBOX_STORAGE)
 
     class Meta:
         verbose_name = 'Imagem'
@@ -50,7 +53,7 @@ class MensagemCoracao(SingletonModel):
 class DownloadMateriais(SingletonModel):
     name = models.CharField('Tópico_da_semana', max_length=200, default='Tópico semanal')
     texto = RichTextField(null=True, blank=True, verbose_name="Texto")
-    image = models.ImageField(upload_to='imagensMaterial/', verbose_name='Imagem', null=True)
+    image = models.ImageField(upload_to='imagensMaterial/', verbose_name='Imagem', null=True, storage=DROPBOX_STORAGE)
     arquivoParaDownload = models.FileField(upload_to='arquivoDownload/', verbose_name='Material para download')
     linkParaTeste = models.URLField('Link para teste', max_length=254, null=True, blank=True)
 
