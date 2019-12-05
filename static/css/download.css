@@ -134,6 +134,9 @@
     #conteudo_texto{
         width: 90%;
     }
+    #background-material-web {
+        height: 140vh;
+    }
 
     .conteudo_section{
         display: flex;
