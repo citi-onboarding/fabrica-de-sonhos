@@ -104,7 +104,7 @@
 }
 @media (max-width: 1960px) {
     #background-material-web {
-        height: 85%;
+        height: 75%;
     }
 }
 
@@ -133,6 +133,9 @@
 @media(max-width: 1024px){
     #conteudo_texto{
         width: 90%;
+    }
+    #background-material-web {
+        height: 140vh;
     }
 
     .conteudo_section{
