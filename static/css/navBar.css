@@ -169,7 +169,7 @@ body {
         position: fixed;
         width: 100vw;
         height: 20px;
-        background-color: #e8e0d8;
+        background-color: rgb(232, 224, 216);
         z-index: 5;
     }
     #secoes_box {
@@ -208,6 +208,19 @@ body {
         border: transparent;
         background: transparent;
         z-index: 5;
+    }
+    .overlay {
+        position: absolute;
+        right: 50px;
+        margin-top: 15px;
+        width: 70px;
+        height: 50px;
+        background: rgba(232, 224, 216, .95);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .overlay.active {
+        transform: scale(100, 100);
     }
     #menu_hamburguer {
         position: fixed;

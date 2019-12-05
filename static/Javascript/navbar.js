@@ -61,3 +61,10 @@ logo_mobile.addEventListener('click', () => {
     changeMenuScreenRemove();
     menuHamburguerAdd();
 })
+
+$(document).ready(function(){
+    $(`.box_menu_hamburguer`).click(function(){
+        $(`.box_menu_hamburguer`).toggleClass(`active`);
+        $(`.overlay`).toggleClass(`active`);
+    })
+})
