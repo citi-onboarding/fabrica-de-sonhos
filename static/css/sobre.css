@@ -112,6 +112,19 @@
     display: flex;
     justify-content: center;
     z-index: 3;
+    align-items: center;
+}
+#box_arrow_down {
+    width: 50px;
+}
+#arrow_button {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    align-items: center;
+    margin-top: 2.5%;
 }
 
 @media(max-width: 1024px){
@@ -129,8 +142,13 @@
     #arrow_down_sobre{
         width: 50px;
     }
-    #arrow_button{
-        padding-right: 50px;
+    #arrow_button {
+        width: 50px;
+        position: absolute;
+        right: 7%;
+    }
+    #background-sobre {
+        height: 840px;
     }
  
 }
@@ -166,15 +184,17 @@
         width: 100px;
     }
     #background-sobre{
-        z-index: 1;
+        z-index: 3;
     }
     #container_sobre{
-        z-index: 1;
+        z-index: 3;
     }
     .arrow_down_sobre{
         z-index: 1;
     }
-    
+    #background-sobre {
+        height: 840px;
+    }
 }
 @media(max-width: 380px){
     .container_valores{
