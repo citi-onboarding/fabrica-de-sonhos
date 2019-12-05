@@ -11,7 +11,7 @@
 #background-material-web{
     display: block;
     width: 100%;
-    height: 100%;   
+    height: 100%;
 }
 
 #background-material-mobile{
@@ -46,6 +46,7 @@
 #conteudo_texto{
     font-family: 'Muli', sans-serif;
     height: auto;
+    width: 60%;
     order: 4;
     text-align: left;
     margin-bottom: 30px;
@@ -98,6 +99,14 @@
     margin-top: 50px;
 
 }
+#arrow_down {
+    width: 50px;
+}
+@media (max-width: 1960px) {
+    #background-material-web {
+        height: 75%;
+    }
+}
 
 @media(max-width: 1600px){
     .container_buttons{
@@ -107,13 +116,16 @@
 
 @media(max-width: 1400px){
     #material{
-        padding-top: 20%; 
+        padding-top: 15%; 
+    }
+    #background-material-web {
+        height: 75%;
     }
 }
 
 @media(max-width: 1200px){
-    #material{
-        padding-top: 25%; 
+    #background-material-web {
+        height: 75%;
     }
 }
 
@@ -122,8 +134,8 @@
     #conteudo_texto{
         width: 90%;
     }
-    #background-material{
-        height: 125%;
+    #background-material-web {
+        height: 140vh;
     }
 
     .conteudo_section{
@@ -133,7 +145,7 @@
     }
     #titulo_section{
         display: flex;
-        justify-content: center;    
+        justify-content: center;
 }
     #conteudo_imagem{
         order: 1;
@@ -172,8 +184,8 @@
         width: 50px;
     }
     #material{
-            padding-top: 35%; 
-        }
+        padding-top: 35%; 
+    }
 }
 
 @media(max-width: 900px){
@@ -212,32 +224,42 @@
     #arrow_down{
         width: 50px;
     }
+    #background-material-web {
+        height: 135%;
+    }
 }
 
 @media(max-width:800px){
     .arrow_button{
         margin-top:20px;
     }
-    #background-material{
-        height: 120%;
+    #background-material-web {
+        height: 125%;
     }
 }
 @media(max-width:550px){
-    #background-material{
+    #background-material-web {
         height: 115%;
     }
     
 }
 @media(max-width:450px){
-    #background-material{
-        height: 110%;
+    #background-material-web {
+        height: 1250px;
     }
     #material{
         padding-top: 40%; 
     }
 }
 @media(max-width:380px){
-    #background-material{
-        height: 110%;
+    #background-material-web {
+        height: 1200px;
+    }
+}
+
+/* MEDIA ESPECÍFICO PARA O IPAD PRO */
+@media (max-width: 1024px) and (max-height: 1366px) and (min-width: 1023px) and (min-height: 1364px) {
+    #background-material-web {
+        height: 100vh;
     }
 }
