@@ -23,9 +23,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-bottom: 150px;
+    /* padding-bottom: 150px; */
 }
 #titulo_section{
+    margin-top: 10%;
     text-align: left;
     font-family: "Bold", "Muli";
     font-size: 40px;
@@ -92,11 +93,11 @@ select:invalid{
     bottom: 80px;
 }
 
-#gambiarra{
+/* #gambiarra{
     background-color: #8C0303;
     width: 100%;
 
-}
+} */
 @media(max-width:1024px){
     .contato_send{
         width: 70%;
