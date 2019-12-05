@@ -1,10 +1,11 @@
 #contato{
     background: #E6DFD8  no-repeat padding-box ;
+    height: 1000px;
 }
 #background_contato{
     position: absolute;
     width: 100%;
-    height: 110%;
+    height: 1000px;
 
 }
 #background_contato_web{
@@ -22,7 +23,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 110vh;
+    height: 1000px;
 
 }
 #titulo_section{
@@ -129,8 +130,9 @@ select:invalid{
         display: none;
     }
     #titulo_section{
-            margin-top: 30%;
-        }
+        margin-top: 30%;
+        padding-left: 0;
+    }
 }
 @media(max-width:800px){
     #send_button{

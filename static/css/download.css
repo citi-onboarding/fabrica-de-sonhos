@@ -5,7 +5,7 @@
 #background-material{
     position: absolute;
     width: 100%;
-    height: 110%;
+    height: 137%;
     z-index: 2;
 }
 #background-material-web{
@@ -133,9 +133,6 @@
 @media(max-width: 1024px){
     #conteudo_texto{
         width: 90%;
-    }
-    #background-material-web {
-        height: 140vh;
     }
 
     .conteudo_section{
