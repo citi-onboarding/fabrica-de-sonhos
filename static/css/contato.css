@@ -92,6 +92,11 @@ select:invalid{
     bottom: 80px;
 }
 
+#gambiarra{
+    background-color: #8C0303;
+    width: 100%;
+
+}
 @media(max-width:1024px){
     .contato_send{
         width: 70%;
