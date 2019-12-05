@@ -315,13 +315,13 @@ body {
 @media (max-width: 320px) {
     #logo_fabrica {
         margin-top: 6px;
-        margin-left: 30px;
+        margin-left: 10px;
     }
     #logo_fabrica_mobile {
         position: fixed;
         width: 200px;
         z-index: 5;
         margin-top: 6px;
-        margin-left: 30px;
+        margin-left: 10px;
     }
 }
