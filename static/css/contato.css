@@ -23,10 +23,10 @@
     display: flex;
     flex-direction: column;
     height: 110vh;
-    /* padding-bottom: 150px; */
+
 }
 #titulo_section{
-    margin-top: 10%;
+    margin-top: 15%;
     text-align: left;
     font-family: "Bold", "Muli";
     font-size: 40px;
@@ -93,11 +93,19 @@ select:invalid{
     bottom: 80px;
 }
 
-/* #gambiarra{
-    background-color: #8C0303;
-    width: 100%;
+@media(max-width: 1500px){
+    #titulo_section{
+        margin-top: 20%;
+    }
+}
 
-} */
+@media(max-width: 1200px){
+    #titulo_section{
+        margin-top: 25%;
+    }
+}
+
+
 @media(max-width:1024px){
     .contato_send{
         width: 70%;
@@ -120,17 +128,33 @@ select:invalid{
     #background_contato_web{
         display: none;
     }
+    #titulo_section{
+            margin-top: 30%;
+        }
 }
 @media(max-width:800px){
     #send_button{
         position: relative;
         left: 60%;
      }
-
 }
-@media(max-width:500px){
+@media(max-width:700px){
+    #titulo_section{
+        margin-top: 40%;
+    }
+}
+@media(max-width:550px){
+    #titulo_section{
+            margin-top: 50%;
+    }
     #send_button{
         position: relative;
         left: 30%;
-     }
+    }
+}
+
+@media(max-width:450px){
+    #titulo_section{
+        margin-top: 60%;
+    }
 }

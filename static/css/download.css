@@ -1,11 +1,11 @@
 #download{
      width: 100%; 
-     /* margin-bottom: -30%;  */
+
 }
 #background-material{
     position: absolute;
     width: 100%;
-    height: 120%;
+    height: 110%;
     z-index: 2;
 }
 #background-material-web{
@@ -98,10 +98,12 @@
     margin-top: 50px;
 
 }
+
 @media(max-width: 1600px){
     .container_buttons{
         padding-left: 300px;
     }
+    
 }
 
 
@@ -110,8 +112,9 @@
         width: 90%;
     }
     #background-material{
-        height: 150%;
+        height: 125%;
     }
+
     .conteudo_section{
         display: flex;
         flex-direction: column;
@@ -160,9 +163,6 @@
 }
 
 @media(max-width: 900px){
-    #background-material{
-        height: 155%;
-    }
     #conteudo_texto{
         width: 90%;
         height: 300px;
@@ -201,21 +201,26 @@
 }
 
 @media(max-width:800px){
-    #background-material{
-        height: 150%;
-    }
     .arrow_button{
         margin-top:20px;
     }
-}
-@media(max-width:600px){
     #background-material{
-        height: 140%;
+        height: 120%;
+    }
+}
+@media(max-width:550px){
+    #background-material{
+        height: 115%;
     }
     
 }
-@media(max-width:400px){
+@media(max-width:450px){
     #background-material{
-        height: 130%;
+        height: 110%;
+    }
+}
+@media(max-width:380px){
+    #background-material{
+        height: 110%;
     }
 }
