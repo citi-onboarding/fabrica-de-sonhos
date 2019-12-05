@@ -4,7 +4,16 @@
     height: 90px;
     display: flex;
     align-items: center;
-    
+    position: absolute;
+    z-index: 5;
+}
+
+.fix_footer {
+    height: 102%;
+    width: 100%;
+    background-color: #8C0303;
+    z-index: -1;
+    position: absolute;
 }
 
 .box_logo {
@@ -92,6 +101,7 @@
         height: 60px;
         display: flex;
         align-items: center;
+        z-index: 5;
     }
 
     .box_logo {
@@ -113,15 +123,16 @@
     }
 }
 
-@media (max-width: 675px) {
-    #footer {
-        background-color: #8C0303;
-        width: 100%;
-        height: 60px;
-        display: flex;
-        align-items: center;
+@media (max-width: 800px) {
+    .numero {
+        margin-left: 1%;
+        font-size: 0.7rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #E2E0DE;
     }
+}
 
+@media (max-width: 675px) {
     .box_logo {
         width: 6.5%;
         height: fit-content;
@@ -139,24 +150,9 @@
         height: fit-content;
         margin-left: 5%;
     }
-
-    .numero {
-        margin-left: 1%;
-        font-size: 0.7rem;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: #E2E0DE;
-    }
 }
 
 @media (max-width: 600px) {
-    #footer {
-        background-color: #8C0303;
-        width: 100%;
-        height: 60px;
-        display: flex;
-        align-items: center;
-    }
-
     .box_logo {
         width: 6.5%;
         height: fit-content;
@@ -185,11 +181,7 @@
 
 @media (max-width: 500px) {
     #footer {
-        background-color: #8C0303;
-        width: 100%;
         height: 45px;
-        display: flex;
-        align-items: center;
     }
 
     .box_logo {
@@ -220,14 +212,6 @@
 }
 
 @media (max-width: 400px) {
-    #footer {
-        background-color: #8C0303;
-        width: 100%;
-        height: 45px;
-        display: flex;
-        align-items: center;
-    }
-
     .box_logo {
         width: 6.5%;
         height: fit-content;
