@@ -1,12 +1,13 @@
 $('#contact-form').submit(function(e) {
     e.preventDefault()
-    const name = $('input[name=name]').val()
-    const email = $('input[name=email]').val()
-    const telephone = $('input[name=telephone]').val()
-    const subject = $('input[name=subject]').val()
-    const message = $('input[name=message]').val()
-
+    const name = $('input[name=name]').val();
+    const email = $('input[name=email]').val();
+    const telephone = $('input[name=telephone]').val();
+    const message = $('textarea[name=message]').val();
+    const select = $('select[name=subject]');
+    const subject = select[0].value;
     const token = jQuery("[name=csrfmiddlewaretoken]").val();
+    console.log(message);
 
     $.ajax({
         type: 'POST',
