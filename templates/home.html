@@ -390,33 +390,47 @@
             <div class="contact">
                 <div class="filha_contatc"></div>
                 <h2 id="titulo_section">Contato</h2>
-                <label class="contato_text" for="input-subject">Assunto:</label>
-                <select required class="select_options" name="subject" id="input-subject">
-                    <option id="select_first" value="" disabel selected>Selecionar assunto</option>
-                    <option value="teste1">Teste1</option>
-                    <option value="teste2">Teste2</option>
-                    <option value="teste3">Teste3</option>
-                </select required>
 
-                <label class="contato_text" for="input-name">Nome:</label>
-                <input class="contato_send" id="name" type="text" name="name" id="input-name"
-                    placeholder="Digite seu nome" required>
+                <div class="contact-field">
+                    <label class="contato_text" for="input-subject">Assunto:</label>
+                    <select required class="select_options" name="subject" id="input-subject">
+                        <option id="select_first" value="" disabel selected>Selecionar assunto</option>
+                        <option value="teste1">Teste1</option>
+                        <option value="teste2">Teste2</option>
+                        <option value="teste3">Teste3</option>
+                    </select required>
+                </div>
 
-                <label class="contato_text" for="input-mail">Email:</label>
-                <input class="contato_send" id="email" type="email" name="email" id="input-mail"
-                    placeholder="Digite seu e-mail" required>
+                <div class="contact-field">
+                    <label class="contato_text" for="input-name">Nome:</label>
+                    <input class="contato_send" id="name" type="text" name="name" id="input-name"
+                        placeholder="Digite seu nome" required>
+                </div>
 
-                <label class="contato_text" for="">Telefone:</label>
-                <input class="contato_send" id="telephone" type="tel" name="telephone" id="input-telephone"
-                    placeholder="Digite seu telefone">
 
-                <label class="contato_text" for="input-message"></label>
-                <input class="contato_send" id="text" type="text" name="message" id="input-message"
-                    placeholder="Digite seu texto">
+                <div class="contact-field">
+                    <label class="contato_text" for="input-mail">Email:</label>
+                    <input class="contato_send" id="email" type="email" name="email" id="input-mail"
+                        placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="contact-field">
+                    <label class="contato_text" for="">Telefone:</label>
+                    <input class="contato_send" id="telephone" type="tel" name="telephone" id="input-telephone"
+                        placeholder="Digite seu telefone">
+                </div>
+
+                <div class="contact-field">
+                    <label class="contato_text" for="input-message"></label>
+                    <textarea class="contato_send" id="text" type="text" name="message" id="input-message"
+                        placeholder="Digite seu texto"></textarea>
+                </div>
 
                 <input id="send_button" type="submit" value="Enviar">
+
             </div>
         </form>
+        
     </section>
 
     <footer id="footer">
