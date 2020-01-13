@@ -31,12 +31,13 @@ function changeMenuScreenAdd() {
 
 $(window).resize(function() {
     if(window.innerWidth <= 1024) {
-        button_menu_hamburguer.classList.remove('remove_button');
+        button_menu_hamburguer.style.visibility('visible');
         logo_mobile.classList.remove('remove_button');
     }
     else {
-        button_menu_hamburguer.classList.add('remove_button');
-        logo_mobile.classList.add('remove_button');
+        button_menu_hamburguer.style.display('none');
+        logo_mobile.classList.display('none');
+        button_icon_exit.style.display('none');
     }
 })
 

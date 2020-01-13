@@ -73,6 +73,11 @@ body {
     margin-top: 1%;
     margin-left: 5%;
 }
+
+.box_menu_hamburguer {
+    display: none;
+}
+
 .remove_button {
     display: none;
 }
@@ -137,10 +142,6 @@ body {
         display: none;
         z-index: 5;
     }
-    .box_menu_hamburguer {
-        margin-top: 0%;
-        z-index: 5;
-    }
 }
 
 
@@ -198,7 +199,6 @@ body {
         color: #8C0303;
         text-decoration: none;
         z-index: 5;
-        fade
     }
     #logo_fabrica {
         position: fixed;
@@ -214,6 +214,7 @@ body {
         border: transparent;
         background: transparent;
         z-index: 5;
+        display: unset;
     }
     #menu_hamburguer {
         position: fixed;
