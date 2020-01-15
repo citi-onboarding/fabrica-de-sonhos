@@ -29,18 +29,6 @@ function changeMenuScreenAdd() {
     action_div.classList.remove('remove_button');
 }
 
-$(window).resize(function() {
-    if(window.innerWidth <= 1024) {
-        button_menu_hamburguer.style.visibility('visible');
-        logo_mobile.classList.remove('remove_button');
-    }
-    else {
-        button_menu_hamburguer.style.display('none');
-        logo_mobile.classList.display('none');
-        button_icon_exit.style.display('none');
-    }
-})
-
 button_menu_hamburguer.addEventListener('click', () => {
     menuHamburguerRemove();
     iconExitAdd();
