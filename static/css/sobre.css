@@ -57,14 +57,14 @@
     overflow: auto;
     align-items: center;
 }
-#texto_sobre::-webkit-scrollbar { 
-    width:10px; 
-    border-radius:10px; 
-    background: #FFFFFF; 
+#texto_sobre::-webkit-scrollbar {
+    width:10px;
+    border-radius:10px;
+    background: #FFFFFF;
     border: 1px solid #8C0303; }
-#texto_sobre::-webkit-scrollbar-thumb { 
-    border-radius:10px; 
-    background:#8c0303;  
+#texto_sobre::-webkit-scrollbar-thumb {
+    border-radius:10px;
+    background:#8c0303;
 }
 
 
@@ -89,14 +89,12 @@
 }
 
 .image_valor{
-    position: relative; 
+    position: relative;
     display: block;
-    
 }
 .gif_valor{
     position: absolute;
     display: block;
-   
 }
 #valor_texto{
     width: 125px;
@@ -143,6 +141,7 @@
         width: 50px;
     }
     #arrow_button {
+        margin-top: 100px;
         width: 50px;
         position: absolute;
         right: 7%;
@@ -150,29 +149,31 @@
     #background-sobre {
         height: 840px;
     }
- 
 }
 @media(max-width: 900px){
-    #background-sobre{
-        height: 80%;
-    }
-    .arrow_down_sobre{
-     
-        justify-content: flex-end;
-    }
-
     #valores{
         flex-wrap: wrap;
         align-items: initial;
     }
-    
-
 }
 @media(max-width:870px){
     #background-sobre{
+        height: 110%;
+    }
+    #arrow_button {
+        margin-top: 0px;
+        width: 50px;
+        position: absolute;
+        right: 7%;
+    }
+}
+@media(max-width: 800px) {
+    #background-sobre{
         height: 100%;
     }
-
+    #arrow_button {
+        margin-top: -15px;
+    }
 }
 @media(max-width: 455px){
     .container_valores{
@@ -195,15 +196,8 @@
     #background-sobre {
         height: 840px;
     }
-}
-@media(max-width: 380px){
-    .container_valores{
-        width: 85px;
-        height: 170px;
-        padding-left: 15px;
-    }
-    #valor_texto{
-        font-size: 12px;
+    #arrow_button {
+        margin-top: 10px;
     }
 }
 
@@ -211,7 +205,6 @@
     .container_valores{
         width: auto;
         height: auto;
-        
     }
     .container_image_gif img{
         width: 70px;
