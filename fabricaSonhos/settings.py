@@ -136,5 +136,5 @@ EMAIL_HOST_USER = 'dreamFactoryRecife@gmail.com'
 EMAIL_HOST_PASSWORD = 'CITi-pta2019.2'
 EMAIL_PORT = 587
 
-# import django_heroku
-# django_heroku.settings(locals())
+import django_heroku
+django_heroku.settings(locals())
