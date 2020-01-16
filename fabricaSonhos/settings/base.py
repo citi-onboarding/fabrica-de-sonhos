@@ -14,7 +14,7 @@ import os
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -138,6 +138,3 @@ EMAIL_PORT = 587
 
 import django_heroku
 django_heroku.settings(locals())
-
-DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
-DROPBOX_OAUTH2_TOKEN = 'op_fyJe7oZAAAAAAAAAAJiC5_4oM98Wh-ujEM9KQblpcKVnuqZ-f4_LGhyFJFXqX'
