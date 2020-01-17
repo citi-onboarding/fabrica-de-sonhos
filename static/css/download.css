@@ -28,6 +28,7 @@
    font-family: 'Muli', sans-serif;
    font-size: 20px;
    color: #8C0303;
+   margin-left: 30px;
 }
 
 .conteudo_section{
@@ -59,12 +60,14 @@
    height: 300px;
    order: 1;
    position: relative; 
+   margin-left: 30px;
 }
 #mascara_imagem_web{
    width: 300px;
    height: 300px;
    order: 1;
    position: absolute;
+   margin-left: 30px;
 }
 #mascara_imagem_mobile{
    width: 300px;
@@ -174,6 +177,7 @@
        order: 1;
        display: flex;
        align-self: center;
+       margin-left: 0px;
    }
    #mascara_imagem_mobile{
        display: block;
@@ -183,6 +187,7 @@
    }
    #mascara_imagem_web{
        display: none;
+       margin-left: 0px;
    }
    #conteudo_titulo{
        order: 2;
@@ -208,6 +213,10 @@
    }
    #material{
        padding-top: 35%; 
+   }
+   #titulo_section_material {
+       text-align: center;
+       margin-left: 0px;
    }
 }
 
