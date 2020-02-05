@@ -296,6 +296,12 @@
    }
 }
 
+@media (min-width: 1500px) and (min-height: 900px) {
+    #background-material-web {
+        height: 80%;
+    }
+}
+
 /* MEDIA ESPECÍFICO PARA O IPAD PRO */
 @media (max-width: 1024px) and (max-height: 1366px) and (min-width: 1023px) and (min-height: 1364px) {
    #background-material-web {
